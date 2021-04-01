@@ -1,0 +1,86 @@
+version: "3"
+
+services:
+  php:
+    image: phpmagento
+    build:
+      context: .
+    restart: always
+    working_dir: /var/www/html/magento
+    volumes:
+      - ./:/var/www/html/magento
+    expose:
+      - "9000"
+    depends_on:
+      - mysql
+      - elasticsearch
+    networks:
+      - magento
+  nginx:
+    restart: always
+    image: nginx:latest
+    working_dir: /var/www/html/magento
+    volumes:
+      - ./:/var/www/html/magento
+      - ./dev/docker/magento.conf:/etc/nginx/conf.d/default.conf
+      - ./dev/docker/magento_es_auth.conf:/etc/nginx/conf.d/magento_es_auth.conf
+    expose:
+      - "80"
+    ports:
+      - 80:80
+    networks:
+      - magento
+  mysql:
+    restart: always
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./dev/docker/initdb:/docker-entrypoint-initdb.d
+      - ./dev/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    expose:
+      - "3306"
+    networks:
+      - magento
+  adminer:
+    restart: always
+    image: adminer
+    volumes:
+      - ./dev/docker/php-custom.ini:/usr/local/etc/php/conf.d/php-custom.ini
+    expose:
+      - "8080"
+    ports:
+      - "8088:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+      ADMINER_DESIGN: "chinh"
+    networks:
+      - magento
+  elasticsearch:
+    image: "docker.elastic.co/elasticsearch/elasticsearch:7.9.1"
+    environment:
+      - "discovery.type=single-node"
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./dev/esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    restart: always
+    networks:
+      - magento
+
+volumes:
+  esdata:
+    driver: local
+
+networks:
+  magento:
+    driver: bridge
