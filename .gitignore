@@ -34,7 +34,6 @@ atlassian*
 /.php_cs.cache
 /grunt-config.json
 /dev/data
-/dev/docker
 /dev/esdata
 /pub/media/*.*
 !/pub/media/.htaccess
