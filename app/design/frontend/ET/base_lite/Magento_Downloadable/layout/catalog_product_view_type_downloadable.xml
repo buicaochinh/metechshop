@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="product.info.downloadable.samples" destination="product.info.main" after="-" />
+        <move element="product.shipping.estimation" destination="product.info.options.wrapper.bottom" after="product.info.social" />
+        <move element="product.stock.info" destination="product.info.options.wrapper.bottom" after="product.shipping.estimation" />
+        <move element="product.page.static" destination="product.info.options.wrapper.bottom" after="product.stock.info" />
+    </body>
+</page>

@@ -1,0 +1,13 @@
+title,page_layout,meta_keywords,meta_description,identifier,content_heading,content,is_active,sort_order,layout_update_xml,custom_theme,custom_root_template,custom_layout_update_xml,custom_theme_from,custom_theme_to,stores
+Home Page,1column,,,etlite_home,,"{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""et_home_slider""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""et_home_services""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""et_promotion_one""}}
+<div class=""page-main"">
+{{widget type=""Magento\Catalog\Block\Product\Widget\NewWidget"" display_type=""all_products"" show_pager=""0"" products_count=""10"" template=""product/widget/new/content/new_grid.phtml"" cache_lifetime=""0""}}
+</div>
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""et_promotion_two""}}
+<div class=""page-main"">
+{{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" title=""Featured &lt;i&gt;Collection&lt;/i&gt;"" show_pager=""0"" products_count=""10"" template=""Magento_CatalogWidget::product/widget/content/grid.phtml"" cache_lifetime=""0"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]""}}
+</div>
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""et_home_blogs""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""et_brand_slider""}}",1,,,,,,,,0

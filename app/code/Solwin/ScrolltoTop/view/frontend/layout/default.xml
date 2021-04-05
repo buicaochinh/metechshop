@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin ScrolltoTop Extension
+
+@category   Solwin
+@package    Solwin_ScrolltoTop
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/ 
+
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <!--To include blocks in left & right columns-->
+    <head>
+        <css src="Solwin_ScrolltoTop::css/scroll.css"/>
+        <script src="Solwin_ScrolltoTop::js/scroll.js" />
+    </head>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Solwin\ScrolltoTop\Block\ScrolltoTop" name="scrolltotop" template="Solwin_ScrolltoTop::scroll.phtml" ifconfig="scrollsection/scrollgroup/active" />
+        </referenceContainer>
+    </body>
+</page>

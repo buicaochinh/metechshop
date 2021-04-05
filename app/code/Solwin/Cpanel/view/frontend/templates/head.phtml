@@ -1,0 +1,20 @@
+<?php
+$layoutname= $this->getConfig('cpanelsection/layoutgroup/layoutname');
+if ($layoutname == "white") { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('css/whitedemo.css')?>">
+<?php } else { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('css/blackdemo.css')?>">
+<?php } ?>
+
+<script type="text/javascript">
+require(['jquery'], function () {
+    jQuery(document).ready(function() {
+        if(jQuery(".block-reorder").find('.block-content.no-display').length > 0) {
+          jQuery(".block.block-reorder").hide();
+        }
+        if (jQuery.trim(jQuery('.sidebar-main .account-nav #account-nav').text()).length == 0 ) {
+          jQuery(".sidebar-main .account-nav").hide();
+        }
+    });
+});
+</script>

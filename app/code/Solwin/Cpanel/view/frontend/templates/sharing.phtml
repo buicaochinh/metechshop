@@ -1,0 +1,14 @@
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$enable = $helper->getShowproductviwesharing();
+$pubid = $helper->getShowproductviwesharingid();
+
+if ($enable) {
+    ?>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div style="margin: 15px 0;">
+    <div class="addthis_sharing_toolbox"></div>
+    </div> 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $pubid; ?>" async="async"></script>
+<?php } ?>

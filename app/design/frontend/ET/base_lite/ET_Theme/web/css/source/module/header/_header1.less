@@ -1,0 +1,1504 @@
+.cms-index-index {
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                + #maincontent {
+                    padding-top: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+@media(min-width: 768px) {
+    .cms-index-index {
+        .page-wrapper {
+            .page-header {
+                &.type1 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                margin-bottom: 25px;
+                .panel.wrapper {
+                    border-bottom: 1px solid #e1e1e1;
+                    background-color: #ffffff;
+                    .panel.header {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        .switcher {
+                            float: left;
+                            margin-left: 0;
+                            margin-right: 0;
+                            &.language {
+                                position: relative;
+                                + .currency {
+                                    position: relative;
+                                    margin-left: 18px;
+                                    padding-left: 18px;
+                                    &:before {
+                                        position: absolute;
+                                        height: 12px;
+                                        width: 1px;
+                                        background: #888888;
+                                        left: 0;
+                                        top: 15px;
+                                        content: "";
+                                        display: block;
+                                    }
+                                }
+                            }
+                            .switcher-options {
+                                .switcher-trigger {
+                                    color: #333333;
+                                    padding: 10px 0;
+                                    line-height: 22px;
+                                    transition: all 0.2s ease-in-out;
+                                    -webkit-transition: all 0.2s ease-in-out;
+                                    -moz-transition: all 0.2s ease-in-out;
+                                    &:after {
+                                        margin-left: 5px;
+                                        vertical-align: middle;
+                                    }
+                                    &:hover {
+                                        color: #227ed1;
+                                    }
+                                    > strong {
+                                        > span {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            img {
+                                                display: block;
+                                                width: 20px;
+                                                height: auto;
+                                                margin-right: 2px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .switcher-dropdown {
+                                    margin-top: 0;
+                                    left: 0;
+                                    right: auto;
+                                    border: 1px solid #e1e1e1;
+                                    padding: 5px 0;
+                                    box-shadow: none;
+                                    &:before, &:after {
+                                        display: none;
+                                    }
+                                    > li {
+                                        margin-bottom: 0;
+                                        display: block;
+                                        &:hover {
+                                            color: #227ed1;
+                                            background: transparent;
+                                        }
+                                        > a {
+                                            display: block;
+                                            padding: 8px 15px;
+                                            color: #555555;
+                                            text-decoration: none;
+                                            transition: all 0.2s ease-in-out;
+                                            -webkit-transition: all 0.2s ease-in-out;
+                                            -moz-transition: all 0.2s ease-in-out;
+                                            &:active, &:focus {
+                                                color: #555555;
+                                                text-decoration: none;
+                                            }
+                                            &:hover {
+                                                color: #227ed1;
+                                                background: transparent;
+                                                text-decoration: none;
+                                            }
+                                            > span {
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                img {
+                                                    display: block;
+                                                    width: 20px;
+                                                    height: auto;
+                                                    margin-right: 2px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .header.links {
+                            > li {
+                                margin-left: 20px;
+                                margin-bottom: 0;
+                                padding: 10px 0;
+                                display: inline-block;
+                                &.authorization-link {
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+                                &.wishlist {
+                                    > a {
+                                        &:before {
+                                            display: inline-block;
+                                            content: "\f08a";
+                                            font-family: "Fontawesome";
+                                            vertical-align: middle;
+                                            margin-right: 2px;
+                                        }
+                                    }
+                                }
+                                &.authorization-link {
+                                    > a {
+                                        &:before {
+                                            display: inline-block;
+                                            content: "\f2c0";
+                                            font-family: "Fontawesome";
+                                            vertical-align: middle;
+                                            margin-right: 2px;
+                                        }
+                                    }
+                                }
+                                > span {
+                                    color: #333333;
+                                    text-decoration: none;
+                                    transition: all 0.2s ease-in-out;
+                                    -webkit-transition: all 0.2s ease-in-out;
+                                    -moz-transition: all 0.2s ease-in-out;
+                                }
+                                > a {
+                                    color: #333333;
+                                    text-decoration: none;
+                                    transition: all 0.2s ease-in-out;
+                                    -webkit-transition: all 0.2s ease-in-out;
+                                    -moz-transition: all 0.2s ease-in-out;
+                                    &.register-link {
+                                        &:before {
+                                            display: inline-block;
+                                            content: "+";
+                                            font-family: "Fontawesome";
+                                            vertical-align: middle;
+                                            margin-right: 2px;
+                                        }
+                                    }
+                                    &:active, &:focus {
+                                        color: #555555;
+                                        text-decoration: none;
+                                    }
+                                    &:hover {
+                                        color: #227ed1;
+                                        text-decoration: none;
+                                    }
+                                }
+                                &.customer-welcome {
+                                    + .authorization-link {
+                                        display: none;
+                                    }
+                                    > .customer-name {
+                                        > .action.switch {
+                                            color: #333333;
+                                            text-decoration: none;
+                                            transition: all 0.2s ease-in-out;
+                                            -webkit-transition: all 0.2s ease-in-out;
+                                            -moz-transition: all 0.2s ease-in-out;
+                                            font-size: 14px;
+                                            display: block;
+                                            &:active, &:focus {
+                                                color: #555555;
+                                                text-decoration: none;
+                                            }
+                                            &:hover {
+                                                color: #227ed1;
+                                                text-decoration: none;
+                                            }
+                                            &:before {
+                                                display: inline-block;
+                                                content: "\f2c0";
+                                                font-family: "Fontawesome";
+                                                vertical-align: middle;
+                                                margin-right: 2px;
+                                            }
+                                        }
+                                    }
+                                    > .customer-menu {
+                                        > .header.links {
+                                            margin-top: 0;
+                                            box-shadow: none;
+                                            border: 1px solid #e1e1e1;
+                                            padding: 5px 0;
+                                            &:before, &:after {
+                                                display: none;
+                                            }
+                                            > li {
+                                                display: block;
+                                                margin-left: 0;
+                                                padding: 0;
+                                                &:hover {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                }
+                                                > a {
+                                                    display: block;
+                                                    padding: 8px 15px;
+                                                    color: #555555;
+                                                    text-decoration: none;
+                                                    transition: all 0.2s ease-in-out;
+                                                    -webkit-transition: all 0.2s ease-in-out;
+                                                    -moz-transition: all 0.2s ease-in-out;
+                                                    &:active, &:focus {
+                                                        color: #555555;
+                                                        text-decoration: none;
+                                                    }
+                                                    &:hover {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        text-decoration: none;
+                                                    }
+                                                }
+                                                &.authorization-link {
+                                                    > a {
+                                                        &:before {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .header {
+                    &.content {
+                        padding: 0 15px;
+                        .header-logo {
+                            float: left;
+                            display: table;
+                            height: 100px;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            .logo {
+                                margin: 0;
+                                max-width: 100%;
+                                display: table-cell;
+                                vertical-align: middle;
+                                float: none;
+                                > img {
+                                    max-width: 100%;
+                                    display: block;
+                                    height: auto;
+                                }
+                            }
+                        }
+                        .block-search {
+                            float: right;
+                            padding-left: 0;
+                            position: relative;
+                            width: 370px;
+                            margin-left: 15px;
+                            padding: 29px 0;
+                            .block-content {
+                                position: relative;
+                            }
+                            .field {
+                                &.search {
+                                    .control {
+                                        .input-text {
+                                            margin: 0;
+                                            padding-right: 43px;
+                                            position: static;
+                                            border-color: #ececec;
+                                            height: 42px;
+                                            border-radius: 0;
+                                            padding-left: 15px;
+                                            font-size: 14px;
+                                            background-color: #ececec;
+                                            &:focus {
+                                                box-shadow: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .actions {
+                                .action {
+                                    &.search {
+                                        right: 0;
+                                        text-align: center;
+                                        height: 42px;
+                                        width: 40px;
+                                        transition: all 0.2s ease-in-out;
+                                        -webkit-transition: all 0.2s ease-in-out;
+                                        -moz-transition: all 0.2s ease-in-out;
+                                        border-radius: 0;
+                                        &:before {
+                                            color: #227ed1;
+                                            font-size: 18px;
+                                            line-height: 40px;
+                                        }
+                                        &:hover {
+                                            &:before {
+                                                color: #051829;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .minicart-wrapper {
+                            margin-left: 30px;
+                            padding: 30px 0;
+                            .action {
+                                &.showcart {
+                                    position: relative;
+                                    padding-left: 50px;
+                                    display: block;
+                                    &:before {
+                                        font-size: 18px;
+                                        color: #ffffff;
+                                        content: "\f290";
+                                        font-family: 'Fontawesome';
+                                        vertical-align: top;
+                                        display: inline-block;
+                                        font-weight: normal;
+                                        overflow: hidden;
+                                        text-align: center;
+                                        height: 40px;
+                                        width: 40px;
+                                        line-height: 38px;
+                                        padding: 0;
+                                        margin: 0;
+                                        background: #051829;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        border: none;
+                                        transition: all 0.2s ease-in-out;
+                                        -webkit-transition: all 0.2s ease-in-out;
+                                        -moz-transition: all 0.2s ease-in-out;
+                                    }
+                                    &:hover {
+                                        &:before {
+                                            background: #227ed1;
+                                        }
+                                    }
+                                    &.active {
+                                        &:before {
+                                            font-size: 18px;
+                                            color: #ffffff;
+                                            content: "\f290";
+                                            font-family: 'Fontawesome';
+                                            vertical-align: top;
+                                            display: inline-block;
+                                            font-weight: normal;
+                                            overflow: hidden;
+                                            text-align: center;
+                                            height: 40px;
+                                            width: 40px;
+                                            line-height: 38px;
+                                            padding: 0;
+                                            margin: 0;
+                                            background: #227ed1;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            border: none;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                    .text {
+                                        position: static;
+                                        height: auto;
+                                        width: auto;
+                                        color: #333;
+                                        font-weight: 600;
+                                        display: block;
+                                        text-transform: capitalize;
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                    }
+                                    .counter {
+                                        &.qty {
+                                            display: block;
+                                            height: auto;
+                                            min-height: auto;
+                                            width: auto;
+                                            min-width: auto;
+                                            text-align: left;
+                                            background: transparent;
+                                            text-shadow: none;
+                                            margin: 0;
+                                            padding: 0;
+                                            font-size: 14px;
+                                            line-height: 1.5;
+                                            color: #333333;
+                                            font-weight: 400;
+                                            .counter-number {
+                                                text-shadow: none;
+                                                &:after {
+                                                    display: inline-block;
+                                                    content: "Item(s)";
+                                                    margin-left: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:hover {
+                                        &:before {
+                                            background: #227ed1;
+                                        }
+                                    }
+                                }
+                            }
+                            .block-minicart {
+                                box-shadow: none;
+                                border-color: #e1e1e1;
+                                right: 0;
+                                margin-top: 0;
+                                &:before, &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .header-contact-block {
+                            float: right;
+                            margin-left: 30px;
+                            padding: 30px 0;
+                            .item {
+                                display: inline-block;
+                                vertical-align: middle;
+                                font-size: 0;
+                                box-sizing: border-box;
+                                .icon-block {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    font-size: 18px;
+                                    width: 40px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    background: #051829;
+                                    color: #ffffff;
+                                    border-radius: 50%;
+                                    margin-right: 10px;
+                                    box-sizing: border-box;
+                                    transition: all 0.2s ease-in-out;
+                                    -webkit-transition: all 0.2s ease-in-out;
+                                    -moz-transition: all 0.2s ease-in-out;
+                                }
+                                .text-block {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                    > a {
+                                        color: #333333;
+                                        display: block;
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        letter-spacing: 0;
+                                        text-transform: initial;
+                                        text-decoration: none;
+                                        transition: all 0.2s ease-in-out;
+                                        -webkit-transition: all 0.2s ease-in-out;
+                                        -moz-transition: all 0.2s ease-in-out;
+                                        &:active, &:focus, &:visited {
+                                            color: #333333;
+                                        }
+                                        &:hover {
+                                            color: #333333;
+                                        }
+                                    }
+                                }
+                                &:hover {
+                                    .icon-block {
+                                        background: #227ed1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .nav-sections {
+                    background: #051829;
+                    margin-bottom: 0;
+                    .nav-sections-item-content {
+                        > .switcher {
+                            display: none;
+                        }
+                    }
+                    .navigation {
+                        padding: 0 15px;
+                        background: #051829;
+                        > ul {
+                            background: transparent;
+                            padding: 0;
+                            li.level0 {
+                                margin-right: 0;
+                                &.parent {
+                                    > a.level-top {
+                                        padding: 17px 28px 17px 20px;
+                                        .ui-menu-icon {
+                                            &:after {
+                                                position: absolute;
+                                                right: 9px;
+                                                font-size: 9px;
+                                                top: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:first-child {
+                                    &.parent {
+                                        > a.level-top {
+                                            padding-left: 0;
+                                        }
+                                    }
+                                    > a.level-top {
+                                        padding-left: 0;
+                                    }
+                                }
+                                > a.level-top {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    display: block;
+                                    color: #ffffff;
+                                    line-height: 20px;
+                                    padding: 17px 20px;
+                                    transition: all 0.2s ease-in-out;
+                                    -webkit-transition: all 0.2s ease-in-out;
+                                    -moz-transition: all 0.2s ease-in-out;
+                                    text-decoration: none;
+                                    &:active, &:focus, &:visited {
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                    }
+                                    &:hover {
+                                        color: #227ed1;
+                                        border: none;
+                                        text-decoration: none;
+                                    }
+                                    &.ui-state-focus {
+                                        color: #227ed1;
+                                        border: none;
+                                    }
+                                    &.ui-state-active {
+                                        color: #227ed1;
+                                        border: none;
+                                    }
+                                }
+                                &.active {
+                                    > a.level-top {
+                                        color: #227ed1;
+                                        border: none;
+                                    }
+                                }
+                                &.has-active {
+                                    > a.level-top {
+                                        color: #227ed1;
+                                        border: none;
+                                    }
+                                }
+                                ul.submenu, div.submenu {
+                                    text-align: left;
+                                    height: auto;
+                                    padding: 10px 0px;
+                                    border-style: solid;
+                                    border-width: 1px;
+                                    border-color: #e1e1e1;
+                                    background: #ffffff;
+                                    box-shadow: none;
+                                    li {
+                                        margin-bottom: 0;
+                                        position: relative;
+                                        &.parent {
+                                            > a {
+                                                > .ui-menu-icon {
+                                                    &:after {
+                                                        content: '\e622';
+                                                        font-family: 'luma-icons';
+                                                        position: absolute;
+                                                        right: 10px;
+                                                        font-size: 9px;
+                                                        top: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        > a {
+                                            position: relative;
+                                            color: #555555;
+                                            text-decoration: none;
+                                            font-size: 14px;
+                                            &:active, &:focus, &:visited {
+                                                color: #555555;
+                                                text-decoration: none;
+                                            }
+                                            &:hover {
+                                                color: #227ed1;
+                                                background: transparent;
+                                                border: none;
+                                            }
+                                            &.ui-state-focus {
+                                                color: #227ed1;
+                                                background: transparent;
+                                                border: none;
+                                            }
+                                            &.ui-state-active {
+                                                color: #227ed1;
+                                                background: transparent;
+                                                border: none;
+                                            }
+                                        }
+                                        &.active {
+                                            > a {
+                                                color: #227ed1;
+                                                background: transparent;
+                                                border: none;
+                                            }
+                                        }
+                                        &.has-active {
+                                            > a {
+                                                color: #227ed1;
+                                                background: transparent;
+                                                border: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1199px) {
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                .header.content {
+                    .minicart-wrapper {
+                        margin-left: 20px;
+                    }
+                    .header-contact-block {
+                        margin-left: 20px;
+                    }
+                    .block-search {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px) {
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                .header.content {
+                    .block-search {
+                        width: 240px;
+                        margin-left: 5px;
+                    }
+                    .header-contact-block {
+                        margin-left: 15px;
+                    }
+                    .minicart-wrapper {
+                        margin-left: 15px;
+                        margin-right: 5px;
+                        .action {
+                            &.showcart {
+                                position: relative;
+                                padding-left: 0;
+                                &:before {
+                                    position: static;
+                                }
+                                &.active {
+                                    &:before {
+                                        position: static;
+                                    }
+                                }
+                                .text {
+                                    display: none !important;
+                                }
+                                .counter {
+                                    &.qty {
+                                        display: block;
+                                        height: 22px;
+                                        min-height: auto;
+                                        width: 22px;
+                                        min-width: auto;
+                                        background: #227ed1;
+                                        text-shadow: none;
+                                        margin: 0;
+                                        padding: 0;
+                                        font-size: 14px;
+                                        line-height: 22px;
+                                        color: #ffffff;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        border-radius: 10px;
+                                        position: absolute;
+                                        top: -10px;
+                                        right: -5px;
+                                        .counter-number {
+                                            color: #ffffff;
+                                            &:after {
+                                                display: none !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    .cms-index-index {
+        .page-wrapper {
+            .page-header {
+                &.type1 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .checkout-index-index {
+        .page-wrapper {
+            .page-header {
+                &.type1 {
+                    margin-bottom:0;
+                    border-bottom: none;
+                    .header.content {
+                        .header-logo {
+                            .logo {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                .header.content {
+                    .header-contact-block {
+                        float: right;
+                        margin-left: 20px;
+                        margin-right: 15px;
+                        margin-top: 7px;
+                        margin-bottom: 17px;
+                        .item {
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 0;
+                            box-sizing: border-box;
+                            .icon-block {
+                                display: inline-block;
+                                vertical-align: middle;
+                                font-size: 18px;
+                                width: 40px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: #051829;
+                                color: #ffffff;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                box-sizing: border-box;
+                                transition: all 0.2s ease-in-out;
+                                -webkit-transition: all 0.2s ease-in-out;
+                                -moz-transition: all 0.2s ease-in-out;
+                            }
+                            .text-block {
+                                display: inline-block;
+                                vertical-align: middle;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 18px;
+                                > a {
+                                    color: #333333;
+                                    display: block;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    letter-spacing: 0;
+                                    text-transform: initial;
+                                    text-decoration: none;
+                                    transition: all 0.2s ease-in-out;
+                                    -webkit-transition: all 0.2s ease-in-out;
+                                    -moz-transition: all 0.2s ease-in-out;
+                                    &:active, &:focus, &:visited {
+                                        color: #333333;
+                                    }
+                                    &:hover {
+                                        color: #333333;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .icon-block {
+                                    background: #227ed1;
+                                }
+                            }
+                        }
+                    }
+                    .header-logo {
+                        float: left;
+                        display: table;
+                        height: 75px;
+                        margin-top: -10px;
+                        .logo {
+                            margin: 0;
+                            padding-left: 40px;
+                            float: none;
+                            display: table-cell;
+                            vertical-align: middle;
+                            > img {
+                                max-width: 180px;
+                            }
+                        }
+                        .action {
+                            &.nav-toggle {
+                                top: 18px;
+                                &:before {
+                                    color: #051829;
+                                    font-weight: 600;
+                                }
+                                &:hover {
+                                    &:before {
+                                        color: #227ed1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .minicart-wrapper {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        margin-top: 7px;
+                        margin-bottom: 17px;
+                        .action {
+                            &.showcart {
+                                position: relative;
+                                &:before {
+                                    font-size: 16px;
+                                    color: #ffffff;
+                                    content: "\f07a";
+                                    font-family: 'Fontawesome';
+                                    vertical-align: top;
+                                    display: inline-block;
+                                    font-weight: normal;
+                                    overflow: hidden;                                
+                                    text-align: center;
+                                    height: 40px;
+                                    width: 40px;
+                                    line-height: 40px;
+                                    padding: 0;
+                                    margin: 0;
+                                    background: #051829;
+                                    border-radius: 50%;
+                                    position: static;
+                                }
+                                &.active {
+                                    &:before {
+                                        font-size: 16px;
+                                        color: #ffffff;
+                                        content: "\f07a";
+                                        font-family: 'Fontawesome';
+                                        vertical-align: top;
+                                        display: inline-block;
+                                        font-weight: normal;
+                                        overflow: hidden;                                
+                                        text-align: center;
+                                        height: 40px;
+                                        width: 40px;
+                                        line-height: 40px;
+                                        padding: 0;
+                                        margin: 0;
+                                        background: #227ed1;
+                                        border-radius: 50%;
+                                        position: static;                                        
+                                    }
+                                }
+                                &:hover {
+                                    &:before {
+                                        background: #227ed1;
+                                        color: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+                        .block-minicart {
+                            box-shadow: none;
+                            border-color: #e1e1e1;
+                            right: 0;
+                            &:before, &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                    .block-search {
+                        width: 100%;
+                        margin-top: 0;
+                        margin-left: 0;
+                        .field {
+                            &.search {
+                                > .label {
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    float: right;
+                                    width: 40px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    background: #051829;
+                                    color: #ffffff;
+                                    margin-top: 7px;
+                                    margin-bottom: 17px;
+                                    cursor: pointer;
+                                    &:before {
+                                        font-size: 16px;
+                                        line-height: 40px;
+                                        color: #ffffff;
+                                        content: "\f002";
+                                        font-family: 'Fontawesome';
+                                        margin: 0;
+                                        display: block;
+                                    }
+                                    &:hover {
+                                        background: #227ed1;
+                                        color: #ffffff;
+                                        &:before {
+                                            color: #ffffff;
+                                        }
+                                    }
+                                    &.active {
+                                        background: #227ed1;
+                                        color: #ffffff;
+                                        &:before {
+                                            color: #ffffff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .nav-sections {
+                    margin-bottom: 0;
+                    background: #ffffff;
+                    .nav-sections-item-title {
+                        .nav-sections-item-switch {
+                            color: #555555;
+                            font-weight: 600;
+                            &:active, &:focus, &:visited {
+                                color: #555555;
+                            }
+                            &:hover {
+                                color: #227ed1;
+                            }
+                        }
+                        &.active {
+                            .nav-sections-item-switch {
+                                color: #555555;
+                                &:active, &:focus, &:visited,&:hover {
+                                    color: #227ed1;
+                                }
+                            }
+                        }
+                    }
+                    .header {
+                        &.links {
+                            > li {
+                                text-transform: uppercase;
+                                font-size: 14px;
+                                > span {
+                                    color: #333333;
+                                    font-weight: 600;
+                                }
+                                > a {
+                                    color: #333333;
+                                    font-weight: 600;
+                                    &:active, &:focus {
+                                        color: #333333;
+                                    }
+                                    &:hover {
+                                        color: #227ed1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .switcher {
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        border-top: none;
+                        border-bottom: none;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        margin-bottom: 15px;
+                        .switcher-options {
+                            display: block;
+                        }
+                        .options {
+                            .action {
+                                &.toggle {
+                                    &.switcher-trigger {
+                                        display: block;
+                                        > strong {
+                                            padding: 8px 15px;
+                                            background: #f6f6f6;
+                                            border: 1px solid #e1e1e1;
+                                            display: block;
+                                            cursor: pointer;
+                                            &:after {
+                                                top: 10px;
+                                                font-size: 11px;
+                                                right: 12px;
+                                            }
+                                            > span {
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                img {
+                                                    display: block;
+                                                    width: 20px;
+                                                    height: auto;
+                                                    margin-right: 2px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        display: block;
+                                        &:after {
+                                            content: "";
+                                            display: none;
+                                        }
+                                    }
+                                    &:after {
+                                        content: "";
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &.active {
+                                ul {
+                                    &.dropdown {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                        ul {
+                            &.dropdown {
+                                padding: 6px 0;
+                                box-shadow: none;
+                                border: 1px solid #e1e1e1;
+                                margin-top: -1px;
+                                display: none;
+                                position: static;
+                                &:before {
+                                    border: none;
+                                }
+                                &:after {
+                                    border: none;
+                                }
+                                > li {
+                                    font-size: 13px;
+                                    font-weight: normal;
+                                    margin-bottom: 0;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                    > a {
+                                        padding: 6px 15px;
+                                        color: #555555;
+                                        text-decoration: none;
+                                        outline: none;
+                                        display: block;
+                                        &:active, &:focus, &:visited {
+                                            color: #555555;
+                                            text-decoration: none;
+                                            outline: none;
+                                        }
+                                        > span {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            img {
+                                                display: block;
+                                                width: 20px;
+                                                height: auto;
+                                                margin-right: 2px;
+                                            }
+                                        }
+                                    }
+                                    &:hover {
+                                        background: transparent;
+                                        > a {
+                                            color: #227ed1;
+                                            background: transparent;
+                                            text-decoration: none;
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .navigation {
+                        background: transparent;
+                        > ul {
+                            padding: 0;
+                            li.level0 {
+                                padding-top: 0;
+                                padding-bottom: 0;
+                                border-color: #e1e1e1;
+                                &:first-child {
+                                    border-top: none;
+                                }
+                                .row {
+                                    margin: 0 !important;
+                                }
+                                > a.level-top {
+                                    color: #555555;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    overflow-wrap: break-word;
+                                    padding: 10px 36px 10px 15px;
+                                    text-transform: uppercase;
+                                    &:after {
+                                        right: 15px;
+                                        top: 13px;
+                                        font-size: 11px;
+                                    }
+                                    > span {
+                                        margin-left: 0 !important;
+                                    }
+                                    &:focus, &:active, &:visited {
+                                        color: #555555;
+                                    }
+                                    &:hover {
+                                        color: #227ed1;
+                                        background: transparent;
+                                        border: none;
+                                    }
+                                    &.ui-state-focus {
+                                        color: #227ed1;
+                                        background: transparent;
+                                        border: none;
+                                    }
+                                    &.ui-state-active {
+                                        color: #227ed1;
+                                        background: transparent;
+                                        border: none;
+                                    }
+                                }
+                                &.active {
+                                    > a.level-top {
+                                        color: #227ed1;
+                                        background: transparent;
+                                        border: none;
+                                    }
+                                }
+                                &.has-active {
+                                    > a.level-top {
+                                        color: #227ed1;
+                                        background: transparent;
+                                        border: none;
+                                    }
+                                }
+                                ul, div {
+                                    &.submenu {
+                                        border: none;
+                                        li {
+                                            position: relative;
+                                            > a {
+                                                position: relative;
+                                                color: #555555;
+                                                padding: 9px 0 9px 15px;
+                                                font-size: 13px;
+                                                font-weight: 400;
+                                                > span {
+                                                    margin-left: 0 !important;
+                                                }
+                                                &:focus, &:active, &:visited {
+                                                    color: #555555;
+                                                }
+                                                &:hover {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-focus {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-active {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.has-active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                        .subchildmenu {
+                                            padding-left: 0;
+                                            > li {
+                                                border-top: 1px solid #e1e1e1;
+                                                > a {
+                                                    padding-left: 25px;
+                                                }
+                                                .subchildmenu {
+                                                    > li {
+                                                        > a {
+                                                            padding-left: 35px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.staticwidth {
+                                    ul, div {
+                                        &.submenu {
+                                            border: none;
+                                            li {
+                                                margin-bottom: 0;
+                                                position: relative;
+                                                > a {
+                                                    position: relative;
+                                                    color: #555555;
+                                                    padding: 9px 0 9px 15px;
+                                                    font-size: 13px;
+                                                    font-weight: 400;
+                                                    > span {
+                                                        margin-left: 0 !important;
+                                                    }
+                                                    &:focus, &:active, &:visited {
+                                                        color: #555555;
+                                                    }
+                                                    &:hover {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                    &.ui-state-focus {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                    &.ui-state-active {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                }
+                                                &.active {
+                                                    > a {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                }
+                                                &.has-active {
+                                                    > a {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                }
+                                                &.level1 {
+                                                    > a {
+                                                        > span {
+                                                            &:after {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .subchildmenu {
+                                                padding-left: 0;
+                                                > li {
+                                                    border-top: 1px solid #e1e1e1;
+                                                    > a {
+                                                        padding-left: 25px;
+                                                    }
+                                                    .subchildmenu {
+                                                        > li {
+                                                            > a {
+                                                                padding-left: 35px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.fullwidth {
+                                    ul, div {
+                                        &.submenu {
+                                            border: none;
+                                            li {
+                                                margin-bottom: 0;
+                                                position: relative;
+                                                > a {
+                                                    position: relative;
+                                                    color: #555555;
+                                                    padding: 9px 0 9px 15px;
+                                                    font-size: 13px;
+                                                    font-weight: 400;
+                                                    > span {
+                                                        margin-left: 0 !important;
+                                                    }
+                                                    &:focus, &:active, &:visited {
+                                                        color: #555555;
+                                                    }
+                                                    &:hover {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                    &.ui-state-focus {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                    &.ui-state-active {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                }
+                                                &.active {
+                                                    > a {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                }
+                                                &.has-active {
+                                                    > a {
+                                                        color: #227ed1;
+                                                        background: transparent;
+                                                        border: none;
+                                                    }
+                                                }
+                                                &.level1 {
+                                                    > a {
+                                                        > span {
+                                                            &:after {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .subchildmenu {
+                                                padding-left: 0;
+                                                > li {
+                                                    border-top: 1px solid #e1e1e1;
+                                                    > a {
+                                                        padding-left: 25px;
+                                                    }
+                                                    .subchildmenu {
+                                                        > li {
+                                                            > a {
+                                                                padding-left: 35px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 639px) {
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                .header.content {
+                    .header-contact-block {
+                        margin-left: 10px;
+                        margin-right: 8px;
+                        .item {
+                            .icon-block {
+                                margin-right: 8px;
+                            }
+                            .text-block {
+                                font-size: 12px;
+                                > a {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 479px) {
+    .page-wrapper {
+        .page-header {
+            &.type1 {
+                .header.content {
+                    .header-logo {
+                        .logo {
+                            > img {
+                                max-width: 145px;
+                            }
+                        }
+                    }
+                    .header-contact-block {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

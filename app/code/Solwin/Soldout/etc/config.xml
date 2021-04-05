@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin Sold Out Label Extension
+
+@category   Solwin
+@package    Solwin_Soldout
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/ 
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <outofstock_product>
+            <outofstockproduct>
+                <enableoutofstock>0</enableoutofstock>
+                <showstock_label_image>label</showstock_label_image>
+                <showstock_position_label>ptop pleft</showstock_position_label>
+                <showstock_position_image>ptop pleft</showstock_position_image>
+                <titleoutofstock>Sold Out</titleoutofstock> 
+                <imageoutofstock></imageoutofstock>
+                <imagewidthoutofstock>60</imagewidthoutofstock>
+                <imageheightoutofstock>60</imageheightoutofstock>
+            </outofstockproduct>
+        </outofstock_product>
+    </default>
+</config>

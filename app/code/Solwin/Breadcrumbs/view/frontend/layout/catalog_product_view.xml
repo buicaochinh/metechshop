@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page>
+    <body>
+	<referenceBlock name="breadcrumbs" remove="true" />
+	<referenceContainer name="page.top">
+		<block class="Solwin\Breadcrumbs\Block\Breadcrumbs" name="solwin_breadcrumbs" as="solwin_breadcrumbs" template="Solwin_Breadcrumbs::breadcrumbs.phtml" />
+	</referenceContainer>
+    </body>
+</page>

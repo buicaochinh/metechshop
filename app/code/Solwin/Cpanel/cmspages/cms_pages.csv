@@ -1,0 +1,9 @@
+title,page_layout,meta_keywords,meta_description,identifier,content_heading,content,is_active,sort_order,layout_update_xml,custom_theme,custom_root_template,custom_layout_update_xml,custom_theme_from,custom_theme_to,stores
+Home Page,1column,,,home,,"{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""home_banner""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""home_advertisement1""}}
+{{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" title=""Featured Products"" show_pager=""0"" products_count=""10"" template=""Magento_CatalogWidget::product/widget/content/grid.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""home_advertisement2""}}
+{{widget type=""Magento\Catalog\Block\Product\Widget\NewWidget"" display_type=""new_products"" show_pager=""0"" products_count=""10"" template=""product/widget/new/content/new_grid.phtml""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""home_blogs""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""home_testimonials""}}
+{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""home_brands""}}",1,,,,,,,,0

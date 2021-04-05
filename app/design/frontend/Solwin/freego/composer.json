@@ -1,0 +1,20 @@
+{
+    "name": "solwin/theme-frontend-freego",
+    "description": "FreeGo is a fully responsive free Magento 2.2 theme with a clean, minimalist and elegant design. It is easy to customize, and highly flexible with a powerful backend panel that helps to build a fully functional online store. The theme looks stunning on all types of screens and devices.",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "solwin/theme-frontend-freego": "100.0.*",
+        "magento/framework": "100.0.*"
+    },
+    "type": "magento2-theme",
+    "version": "100.0.4",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}

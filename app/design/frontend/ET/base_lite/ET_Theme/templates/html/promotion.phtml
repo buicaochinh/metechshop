@@ -1,0 +1,11 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$headerTopStaticBlock = $baseHelper->getConfigValue('header_section/general/header_top_static_block');
+?>
+<?php if ($headerTopStaticBlock != '') { ?>
+    <div class="top-promotion-wrapper">
+        <div class="page-main">
+            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerTopStaticBlock)->toHtml(); ?>
+        </div>
+    </div>
+<?php } ?>

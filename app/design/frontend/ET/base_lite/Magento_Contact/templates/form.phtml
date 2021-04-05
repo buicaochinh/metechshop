@@ -1,0 +1,109 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/** @var \Magento\Contact\Block\ContactForm $block */
+?>
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+?>
+<div>
+    <form class="form contact"
+          action="<?= $block->escapeUrl($block->getFormAction()) ?>"
+          id="contact-form"
+          method="post"
+          data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+          data-mage-init='{"validation":{}}'>
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?= $block->escapeHtml(__('Write Us')) ?></span></legend><br />
+            <div class="field note no-label"><?= $block->escapeHtml(__('Jot us a note and we’ll get back to you as quickly as possible.')) ?></div>
+            <div class="field name required">
+                <label class="label" for="name"><span><?= $block->escapeHtml(__('Name')) ?></span></label>
+                <div class="control">
+                    <input name="name" id="name" title="<?= $block->escapeHtmlAttr(__('Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('name') ?: $this->helper(\Magento\Contact\Helper\Data::class)->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+                <div class="control">
+                    <input name="email" id="email" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" value="<?= $block->escapeHtmlAttr($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('email') ?: $this->helper(\Magento\Contact\Helper\Data::class)->getUserEmail()) ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="field telephone">
+                <label class="label" for="telephone"><span><?= $block->escapeHtml(__('Phone Number')) ?></span></label>
+                <div class="control">
+                    <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('telephone')) ?>" class="input-text" type="text" />
+                </div>
+            </div>
+            <div class="field comment required">
+                <label class="label" for="comment"><span><?= $block->escapeHtml(__('What’s on your mind?')) ?></span></label>
+                <div class="control">
+                    <textarea name="comment" id="comment" title="<?= $block->escapeHtmlAttr(__('What’s on your mind?')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"><?= $block->escapeHtml($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('comment')) ?></textarea>
+                </div>
+            </div>
+            <?= $block->getChildHtml('form.additional.info') ?>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="hideit" id="hideit" value="" />
+                <button type="submit" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" class="action submit primary">
+                    <span><?= $block->escapeHtml(__('Submit')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <?php
+    $storeTitle = $baseHelper->getConfigValue('contact_section/contact_info/store_title');
+    $storePhone = $baseHelper->getConfigValue('contact_section/contact_info/store_phone');
+    $storeAddress = $baseHelper->getConfigValue('contact_section/contact_info/store_address');
+    $storeEmail = $baseHelper->getConfigValue('contact_section/contact_info/store_email');
+    $addtionalInfo = $baseHelper->getConfigValue('contact_section/contact_info/addtional_info');
+    ?>
+    <div class="contact-info-wrapper">
+        <div class="title-block">
+            <span>
+                <?php echo $storeTitle; ?>
+            </span>
+        </div>
+        <div class="content-block">
+            <?php if ($storeAddress != '') { ?>
+                <div class="item">
+                    <span class="title-span">
+                        <?php echo __('Address'); ?>:
+                    </span>
+                    <span class="text-span">
+                        <?php echo $storeAddress; ?>
+                    </span>
+                </div>
+            <?php } ?>
+            <?php if ($storePhone != '') { ?>
+                <div class="item">
+                    <span class="title-span">
+                        <?php echo __('Phone'); ?>:
+                    </span>
+                    <span class="text-span">
+                        <?php echo $storePhone; ?>
+                    </span>
+                </div>
+            <?php } ?>
+            <?php if ($storeEmail != '') { ?>
+                <div class="item">
+                    <span class="title-span">
+                        <?php echo __('Email'); ?>:
+                    </span>
+                    <span class="text-span">
+                        <?php echo $storeEmail; ?>
+                    </span>
+                </div>
+            <?php } ?>
+            <?php if ($addtionalInfo != '') { ?>
+                <div class="item">
+                    <span class="text-span">
+                        <?php echo $addtionalInfo; ?>
+                    </span>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>

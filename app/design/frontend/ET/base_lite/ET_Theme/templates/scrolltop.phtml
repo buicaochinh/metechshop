@@ -1,0 +1,11 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enable = $baseHelper->getConfigValue('theme_section/scrolltop/enable');
+?>
+<?php if ($enable) { ?>
+    <a class="scrollTop" href="#" title="<?php echo __('Scroll To Top'); ?>">
+        <span>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </span>
+    </a>
+<?php } ?>

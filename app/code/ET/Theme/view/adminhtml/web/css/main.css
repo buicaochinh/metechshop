@@ -1,0 +1,10 @@
+.config-nav-block .admin__page-nav-items .admin__page-nav-item.et-premium-tab .admin__page-nav-link > span::before {
+    background: url(../images/star.png) no-repeat;
+    background-size: 16px;
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: bottom;
+    height: 16px;
+    width: 16px;
+}

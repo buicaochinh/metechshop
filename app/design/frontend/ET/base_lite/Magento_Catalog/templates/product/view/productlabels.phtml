@@ -1,0 +1,49 @@
+<?php
+$_product = $block->getProduct();
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$showNewLabel = $baseHelper->getConfigValue('product_section/general/show_new_label');
+$showSaleLabel = $baseHelper->getConfigValue('product_section/general/show_sale_label');
+?>
+<div class="product-labels">
+    <?php
+    if ($showNewLabel == 1) {
+        $fromDate = $_product->getNewsFromDate();
+        $toDate = $_product->getNewsToDate();
+
+        if (isset($fromDate) && isset($toDate)) {
+            $fromDate = strtotime($fromDate);
+            $toDate = strtotime($toDate);
+            $now = strtotime(date("Y-m-d h:m:s"));
+
+            if ($fromDate <= $now && $now <= $toDate) {
+                ?>
+                <span class="new-label"><?php echo __('New'); ?></span>
+                <?php
+            }
+        }
+    }
+
+    if ($showSaleLabel == 1) {
+        $special_price = number_format($_product->getSpecialPrice(), 2);
+        $regular_price = number_format($_product->getPrice(), 2);
+        if (isset($special_price) && $special_price > 0) {
+            if ($special_price < $regular_price) {
+                $fromSpecialDate = $_product->getSpecialFromDate();
+                $toSpecialDate = $_product->getSpecialToDate();
+
+                if (isset($fromSpecialDate) && isset($toSpecialDate)) {
+                    $fromSpecialDate = strtotime($fromSpecialDate);
+                    $toSpecialDate = strtotime($toSpecialDate);
+                    $now = strtotime(date("Y-m-d h:m:s"));
+
+                    if ($fromSpecialDate <= $now && $now <= $toSpecialDate) {
+                        ?>
+                        <span class="sale-label"><?php echo __('Sale'); ?></span>
+                        <?php
+                    }
+                }
+            }
+        }
+    }
+    ?>
+</div>

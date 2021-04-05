@@ -1,0 +1,21 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<if args="isAllowed()">
+    <div class="pro-img">
+        <a class="add-border product-item-photo"
+           attr="href: $row().url">
+            <img if="imageExists($row())"
+                 class="product-image-photo"
+                 attr="src: getImageUrl($row()),
+                 alt: getLabel($row()),
+                 title: getLabel($row()),
+                 width: getResizedImageWidth($row()),
+                 height: getResizedImageHeight($row())"/>
+        </a>
+    </div>
+</if>
+

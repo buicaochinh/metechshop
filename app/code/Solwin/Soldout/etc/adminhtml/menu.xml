@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Solwin Infotech
+ * Solwin Sold Out Label Extension
+ *
+ * @category   Solwin
+ * @package    Solwin_Soldout
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/ 
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Solwin_Soldout::soldout" title="Sold Out Label" module="Solwin_Soldout" sortOrder="5" resource="Solwin_Soldout::soldout" parent="Solwin_Extensions::extensions"/>
+        <add id="Solwin_Soldout::outofstock_config" title="Configuration" module="Solwin_Soldout" parent="Solwin_Soldout::soldout" sortOrder="10" action="adminhtml/system_config/edit/section/outofstock_product" resource="Solwin_Soldout::outofstock_config"/>
+    </menu>
+</config>

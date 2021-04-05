@@ -1,0 +1,67 @@
+<?php
+/**
+ * Solwin Infotech
+ * Solwin ScrolltoTop Extension
+ *
+ * @category   Solwin
+ * @package    Solwin_ScrolltoTop
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+?>
+<?php
+$enable = $block->getConfig('scrollsection/scrollgroup/active');
+$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+$moduleManager = $objectManager->get('\Magento\Framework\Module\Manager');
+$moduleEnabled = $moduleManager->isEnabled('Solwin_ScrolltoTop');
+if ($enable && $moduleEnabled) {
+    $imghtml = $text = $img = $path = '';
+
+    $bgclr = $block->getConfig('scrollsection/scrollgroup/bgclr');
+    $bgHoverClr = $block->getConfig('scrollsection/scrollgroup/bghoverclr');
+    $textclr = $block->getConfig('scrollsection/scrollgroup/textclr');
+    $textHoverClr = $block->getConfig('scrollsection/scrollgroup/texthoverclr');
+    $display = $block->getConfig('scrollsection/scrollgroup/display');
+    $text = $block->getConfig('scrollsection/scrollgroup/link_text');
+    $img = $block->getConfig('scrollsection/scrollgroup/link_image');
+    $hoverImg = $block->getConfig('scrollsection/scrollgroup/link_hover_image');
+    $position = $block->getConfig('scrollsection/scrollgroup/position');
+    if ($img != '') {
+        $path = $block->getBaseUrl() . 'pub/media/scrolltotop/' . $img;
+        $hover_path = $block->getBaseUrl() . 'pub/media/scrolltotop/' . $hoverImg;
+        $imghtml = '<img class="scroll-img default-img" src="' . $path . '" alt="top" />'
+                . '<img class="scroll-img hover-img" src="' . $hover_path . '" alt="top-hover" />';
+    }
+    ?>
+
+    <div id="scroll-to-top">
+        <a class="scrollup" href="#" title="<?= $block->escapeHtml(__('Scroll to Top')) ?>" style="<?php if ($position == 1) { ?> right:10px; <?php } else { ?> left:10px; <?php } ?> ">
+            <?php
+            if ($display == 2 || $display == 3) {
+                echo $imghtml;
+            }
+            ?>
+            <?php if ($display == 1 || $display == 3) { ?>
+            <span style="<?php if ($display == 3) { ?> padding: 0 0 5px;display: block; <?php } else { ?> float: left;padding: 10px 0;text-align: center;width: 100%; <?php } ?>"><?= $block->escapeHtml(__($text)) ?></span>
+            <?php } ?>
+        </a>
+    </div>
+    <?php
+}
+?>
+<style>
+    .scrollup:visited, .scrollup:active {
+        color: #<?= /* @noEscape */ $textclr ?> !important;
+    }
+    .scrollup{
+        color: #<?= /* @noEscape */ $textclr ?> !important;
+        background-color: #<?= /* @noEscape */ $bgclr ?> !important;
+        border-color: #<?= /* @noEscape */ $bgclr ?> !important;
+    }
+
+    .scrollup:hover {
+        color: #<?= /* @noEscape */ $textHoverClr  ?> !important;
+        background-color: #<?= /* @noEscape */ $bgHoverClr ?> !important;
+        border-color: #<?= /* @noEscape */ $bgHoverClr ?> !important;
+    }
+</style>

@@ -1,0 +1,100 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/** @var \Magento\Catalog\Block\Product\View\Details $block */
+?>
+<?php if ($detailedInfoGroup = $block->getGroupSortedChildNames('detailed_info', 'getChildHtml')) : ?>
+    <div class="product info detailed">
+        <?php $layout = $block->getLayout(); ?>
+        <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
+            <?php foreach ($detailedInfoGroup as $name) : ?>
+                <?php
+                $html = $layout->renderElement($name);
+                if (!trim($html)) {
+                    continue;
+                }
+                $alias = $layout->getElementAlias($name);
+                $label = $block->getChildData($alias, 'title');
+                ?>
+                <div class="data item title"
+                     data-role="collapsible" id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>">
+                    <a class="data switch"
+                       tabindex="-1"
+                       data-toggle="trigger"
+                       href="#<?= $block->escapeUrl($alias) ?>"
+                       id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title">
+                           <?= /* @noEscape */ $label ?>
+                    </a>
+                </div>
+                <div class="data item content"
+                     aria-labelledby="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title" id="<?= $block->escapeHtmlAttr($alias) ?>" data-role="content">
+                         <?= /* @noEscape */ $html ?>
+                </div>
+            <?php endforeach; ?>
+            <?php
+            $baseHelper = $this->helper('ET\Base\Helper\Data');
+            
+            $enableTabOne = $baseHelper->getConfigValue('product_section/custom_tabs/enable_tab_one');
+            if ($enableTabOne == 1) {
+                $customTabOneType = $baseHelper->getConfigValue('product_section/custom_tabs/custom_tab_one_type');
+                $customTabOneTitle = $baseHelper->getConfigValue('product_section/custom_tabs/custom_tab_one_title');
+                $customTabOneCode = $baseHelper->getConfigValue('product_section/custom_tabs/custom_tab_one_code');
+                if ($customTabOneCode != '' && $customTabOneTitle != '') {
+                    $TabOneHtml = '';
+                    $alias = 1;
+                    if ($customTabOneType == 'cmsblock') {
+                        $TabOneHtml = $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($customTabOneCode)->toHtml();
+                    }
+                    ?> 
+                    <div class="data item title"
+                         aria-labeledby="tab-label-<?= /* @escapeNotVerified */ $alias ?>-title"
+                         data-role="collapsible" id="tab-label-<?= /* @escapeNotVerified */ $alias ?>">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#<?= /* @escapeNotVerified */ $alias ?>"
+                           id="tab-label-<?= /* @escapeNotVerified */ $alias ?>-title">
+                               <?= /* @escapeNotVerified */ $customTabOneTitle ?>
+                        </a>
+                    </div>
+                    <div class="data item content" id="<?= /* @escapeNotVerified */ $alias ?>" data-role="content">
+                        <?= /* @escapeNotVerified */ $TabOneHtml ?>
+                    </div>
+                    <?php
+                }
+            }
+            $enableTabTwo = $baseHelper->getConfigValue('product_section/custom_tabs/enable_tab_two');
+            if ($enableTabTwo == 1) {
+                $customTabTwoType = $baseHelper->getConfigValue('product_section/custom_tabs/custom_tab_two_type');
+                $customTabTwoTitle = $baseHelper->getConfigValue('product_section/custom_tabs/custom_tab_two_title');
+                $customTabTwoCode = $baseHelper->getConfigValue('product_section/custom_tabs/custom_tab_two_code');
+                if ($customTabTwoCode != '' && $customTabTwoTitle != '') {
+                    $TabTwoHtml = '';
+                    $alias = 2;
+                    if ($customTabTwoType == 'cmsblock') {
+                        $TabTwoHtml = $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($customTabTwoCode)->toHtml();
+                    }
+                    ?> 
+                    <div class="data item title"
+                         aria-labeledby="tab-label-<?= /* @escapeNotVerified */ $alias ?>-title"
+                         data-role="collapsible" id="tab-label-<?= /* @escapeNotVerified */ $alias ?>">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#<?= /* @escapeNotVerified */ $alias ?>"
+                           id="tab-label-<?= /* @escapeNotVerified */ $alias ?>-title">
+                               <?= /* @escapeNotVerified */ $customTabTwoTitle ?>
+                        </a>
+                    </div>
+                    <div class="data item content" id="<?= /* @escapeNotVerified */ $alias ?>" data-role="content">
+                        <?= /* @escapeNotVerified */ $TabTwoHtml ?>
+                    </div>
+                    <?php
+                }
+            }
+            ?>
+        </div>
+    </div>
+<?php endif; ?>

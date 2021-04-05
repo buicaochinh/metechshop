@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin Sold Out Label Extension
+
+@category   Solwin
+@package    Solwin_Soldout
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <!-- for create section -->
+        <section id="outofstock_product" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Sold Out Label</label>
+            <!-- Assign section to tab -->
+            <tab>solwin_extension_tab</tab>
+            <resource>Solwin_Soldout::outofstock_config</resource>
+            <!-- create group for fields in section -->
+            <group id="outofstockproduct" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sold Out Label Configuration</label>
+                <field id="enableoutofstock" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable sold out Label</label>
+                    <comment><![CDATA[Select Yes to enable Sold Out module on frontend.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="showstock_label_image" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show sold out Label/Image</label>
+                    <comment><![CDATA[select sold out label or image]]></comment>
+                    <source_model>Solwin\Soldout\Model\Config\Source\StockOption</source_model>
+                    <depends>
+                        <field id="enableoutofstock">1</field>
+                    </depends>
+                </field>
+                <field id="showstock_position_label" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show sold out Label Position</label>
+                    <comment><![CDATA[select sold out label position]]></comment>
+                    <source_model>Solwin\Soldout\Model\Label\Source\Position</source_model>
+                    <depends>
+                        <field id="showstock_label_image">label</field>
+                        <field id="enableoutofstock">1</field>
+                    </depends>
+                </field>
+                <field id="showstock_position_image" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show sold out Image Position</label>
+                    <comment><![CDATA[select sold out image position.]]></comment>
+                    <source_model>Solwin\Soldout\Model\Label\Source\Position</source_model>
+                    <depends>
+                        <field id="showstock_label_image">image</field>
+                        <field id="enableoutofstock">1</field>
+                    </depends>
+                </field>
+                <field id="titleoutofstock" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sold Out Label Title</label>
+                    <comment><![CDATA[enter sold out label title]]></comment>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enableoutofstock">1</field>
+                        <field id="showstock_label_image">label</field>
+                    </depends>
+                </field>
+                <field id="imageoutofstock" translate="label comment" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image for Sold Out Label</label>
+                    <comment><![CDATA[upload image for sold out label. Allow file formats are *.jpg, *.jpeg, *.png, *.gif.<style>
+                          #outofstock_product_outofstockproduct_imageoutofstock_image {
+                              width: 100px;
+                              height: auto;
+                          }
+                          #outofstock_product_outofstockproduct_imageoutofstock {
+                              display: block;
+                          }
+                          #outofstock_product_outofstockproduct_imageoutofstock_delete {
+                              vertical-align: bottom;
+                          }
+                      </style>]]></comment>
+                    <backend_model>Solwin\Soldout\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">outofstockimage</upload_dir>
+                    <base_url type="media" scope_info="1">outofstockimage</base_url>
+                    <depends>
+                        <field id="enableoutofstock">1</field>
+                        <field id="showstock_label_image">image</field>
+                    </depends>
+                </field>
+                <field id="imageheightoutofstock" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sold Out Image Height</label>
+                    <comment><![CDATA[enter sold out image height]]></comment>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enableoutofstock">1</field>
+                        <field id="showstock_label_image">image</field>
+                    </depends>
+                </field>
+                <field id="imagewidthoutofstock" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sold Out Image Width</label>
+                    <comment><![CDATA[enter sold out image width]]></comment>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enableoutofstock">1</field>
+                        <field id="showstock_label_image">image</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

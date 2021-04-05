@@ -1,0 +1,29 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$baseUrl = $this->getBaseUrl();
+$headerStaticBlock = $baseHelper->getConfigValue('header_section/general/header_static_block');
+?>
+<?php echo $this->getChildHtml("et.top.promotion"); ?>
+<header class="page-header type1">
+    <div class="panel wrapper">
+        <div class="panel header">
+            <?php echo $this->getChildHtml("skip_to_content"); ?>
+            <?php echo $this->getChildHtml("store_language"); ?>
+            <?php echo $this->getChildHtml("currency"); ?>
+            <?php echo $this->getChildHtml("header.links"); ?>
+        </div>
+    </div>
+    <div class="header content">
+        <div class="header-logo">
+            <?php echo $this->getChildHtml("logo"); ?>
+        </div>
+        <?php echo $this->getChildHtml("minicart"); ?>
+        <?php
+        if ($headerStaticBlock != '') {
+            echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+        }
+        ?>
+        <?php echo $this->getChildHtml("top.search"); ?>
+    </div>
+    <?php echo $this->getChildHtml("navigation.sections"); ?>
+</header>

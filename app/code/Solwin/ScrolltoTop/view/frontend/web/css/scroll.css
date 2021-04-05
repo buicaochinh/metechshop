@@ -1,0 +1,46 @@
+/**
+ * Solwin Infotech
+ * Solwin ScrolltoTop Extension
+ *
+ * @category   Solwin
+ * @package    Solwin_ScrolltoTop
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/ 
+ */
+
+.scrollup {
+    /*background: none repeat scroll 0 0 #ffffff;*/
+    border: 1px solid;
+    bottom: 82px;
+    /*color: #8f8f8f !important;*/
+    cursor: pointer;
+    display: none;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 40px;
+    padding: 2px;
+    position: fixed;
+    text-align: center;
+    width: 40px;
+    z-index: 9999;
+}
+.scrollup:hover {
+    border-color: #ffffff;
+    text-decoration: none;
+}
+.scroll-img {
+    display: block;
+    margin: 0 auto;
+}
+.scrollup .scroll-img.default-img {
+    display: block;
+}
+.scrollup .scroll-img.hover-img {
+    display: none;
+}
+.scrollup:hover .scroll-img.default-img {
+    display: none;
+}
+.scrollup:hover .scroll-img.hover-img {
+    display: block;
+}

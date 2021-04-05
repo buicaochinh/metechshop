@@ -1,0 +1,76 @@
+.clear-fix {
+    clear: both;
+}
+.product-name-link {
+    display: block;
+    margin: 10px 0;
+}
+.more-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.more-list li {
+    display: block;
+    margin-bottom: 5px;
+}
+.product-name {
+    float: left;
+}
+.admin__menu #menu-solwin-cpanel-view .submenu .item-addimage,
+.admin__menu #menu-solwin-cpanel-view .submenu .item-addimage-two {
+    background-size: cover;
+}
+.admin__menu #menu-solwin-cpanel-view .submenu .item-addimage {
+    background-image: url('../images/freego-banner.jpg');
+    height: 363px;
+    width: 238px;
+}
+
+.admin__menu #menu-solwin-cpanel-view .submenu .item-addimage-two {
+    background-image: url('../images/freego-banner-two.jpg');
+    height: 72px;
+    width: 238px;
+}
+.admin__menu #menu-solwin-cpanel-view .submenu .item-add strong.submenu-group-title,
+.admin__menu #menu-solwin-cpanel-view .submenu .item-add-two strong.submenu-group-title,
+.admin__menu #menu-solwin-cpanel-view .submenu .item-addimage a span,
+.admin__menu #menu-solwin-cpanel-view .submenu .item-addimage-two a span {
+    display: none;
+}
+.admin__menu #menu-solwin-cpanel-view > a::before {
+    content: '' !important;
+    margin: 0 auto .5rem;
+    width: 22px;
+    height: 22px;
+}
+.admin__menu #menu-solwin-cpanel-view > a::before {
+    background: url('../images/solwin-freego-icons.png') no-repeat -10px -10px;
+}
+.admin__menu #menu-solwin-cpanel-view > a:hover:before {
+    background: url('../images/solwin-freego-icons.png') no-repeat -42px -10px;
+}
+.admin__menu #menu-solwin-cpanel-view .submenu ul li:nth-child(2) a:hover,
+.admin__menu #menu-solwin-cpanel-view .submenu ul li:nth-child(3) a:hover {
+    background-color: transparent !important;
+}
+.admin__menu #menu-solwin-cpanel-view .submenu ul li:nth-child(2) a,
+.admin__menu #menu-solwin-cpanel-view .submenu ul li:nth-child(3) a {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+.admin__menu #menu-solwin-cpanel-view .submenu a::after {
+    content: '' !important;
+}
+.config-nav-block.solwin_freego_logo strong:before {
+  background-image: url('../images/solwin-freego-logo.png');
+  width: 30px;
+  height: 26px;
+  content: '';
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+#menu-solwin-cpanel-view .submenu .parent {
+    margin-bottom: 0 !important;
+}

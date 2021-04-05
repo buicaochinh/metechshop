@@ -1,0 +1,19 @@
+.admin__menu #menu-solwin-extensions-extensions > a::before {
+    content: '' !important;
+    background: url('../images/solwin_admin_logo.png') no-repeat -10px -10px;
+    margin: 0 auto .5rem;
+    width: 22px;
+    height: 22px;
+}
+.admin__menu #menu-solwin-extensions-extensions > a:hover:before {
+    background: url('../images/solwin_admin_logo.png') no-repeat -42px -10px;
+}
+.config-nav-block.solwin_solwin_logo strong:before {
+  background-image: url('../images/solwin-solwin-logo.png');
+  width: 30px;
+  height: 26px;
+  content: '';
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}

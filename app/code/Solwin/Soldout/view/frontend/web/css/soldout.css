@@ -1,0 +1,46 @@
+/**
+ * Solwin Infotech
+ * Solwin Sold Out Label Extension
+ *
+ * @category   Solwin
+ * @package    Solwin_Soldout
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+
+.products-list .product.photo.product-item-photo {
+  position: relative;
+}
+.out-of-stock-wrapper {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  font-size: 16px;
+}
+.ptop {
+    top: 0;
+}
+.pleft {
+    left: 0;
+}
+.pright {
+    right: 0;
+}
+.pcenter {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.pmiddle {
+    top: 50%;
+}
+.pbottom {
+    bottom: 0;
+}
+.rating-summary .rating-result {
+  margin-left: 5px;
+}
+.product-item .product-reviews-summary .reviews-actions {
+  display: inline-block;
+}

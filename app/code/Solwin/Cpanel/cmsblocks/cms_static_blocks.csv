@@ -1,0 +1,403 @@
+title,identifier,content,is_active,stores
+Home Advertisement 1,home_advertisement1,"<div class=""hat-main pad-main"">
+    <div class=""hat-row"">
+        <div class=""hat-inner"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-320.png""}}"" alt=""img-400-320"" />
+            </a>
+        </div>
+        <div class=""hat-inner"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-320.png""}}"" alt=""img-400-320"" />
+            </a>
+        </div>
+        <div class=""hat-inner"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-320.png""}}"" alt=""img-400-320"" />
+            </a>
+        </div>
+    </div>
+</div>
+",1,0
+Home Advertisement 2,home_advertisement2,"<div class=""hab-main pad-main"">
+    <div class=""hab-row"">
+        <div class=""hab-inner"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-610-490.png""}}"" alt=""img-610-490"" />
+            </a>
+        </div>
+        <div class=""hab-inner"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-610-245.png""}}"" alt=""img-610-245"" />
+            </a>
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-610-245.png""}}"" alt=""img-610-245"" />
+            </a>
+        </div>
+    </div>
+</div>
+",1,0
+Home banner Block,home_banner,"<div class=""hb-main pad-main-bottom"">
+    <div class=""hb-left"">
+        <ul class=""hb-slider"">
+            <li>
+                <a href=""#"">
+                    <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-925-456.png""}}"" alt=""img-925-456"" />
+                </a>
+            </li>
+            <li>
+                <a href=""#"">
+                    <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-925-456.png""}}"" alt=""img-925-456"" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class=""hb-right"">
+        <div class=""hb-top"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-295-218.png""}}"" alt=""img-295-218"" />
+            </a>
+        </div>
+        <div class=""hb-bottom"">
+            <a href=""#"">
+                <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-295-218.png""}}"" alt=""img-295-218"" />
+            </a>
+        </div>
+    </div>
+</div>
+",1,0
+Home Blogs,home_blogs,"<div class=""hpb-main pad-main"">
+    <div class=""block-title-main"">
+        <h2>Latest Posts</h2>
+        <div class=""title-border""></div>
+    </div>
+    <div style=""margin: 0 -10px;"">
+        <div class=""hpb-main hpb-slider"">
+            <div class=""hpb-inner"">
+                <div class=""hpb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-250.png""}}"" alt=""img-400-250"" />
+                    </a>
+                </div>
+                <div class=""hpb-content-main"">
+                    <div class=""hpb-content"">
+                        <h2>John Doe</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <div class=""hpb-info"">
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-user""></i> <em>Admin</em>
+                        </span>
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-calendar"" aria-hidden=""true""></i> <em>22 May, 2016</em>
+                        </span>
+                        <span class=""readmore"">
+                            <a href=""#"">Read More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class=""hpb-inner"">
+                <div class=""hpb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-250.png""}}"" alt=""img-400-250"" />
+                    </a>
+                </div>
+                <div class=""hpb-content-main"">
+                    <div class=""hpb-content"">
+                        <h2>John Doe</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <div class=""hpb-info"">
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-user""></i> <em>Admin</em>
+                        </span>
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-calendar"" aria-hidden=""true""></i> <em>22 May, 2016</em>
+                        </span>
+                        <span class=""readmore"">
+                            <a href=""#"">Read More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class=""hpb-inner"">
+                <div class=""hpb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-250.png""}}"" alt=""img-400-250"" />
+                    </a>
+                </div>
+                <div class=""hpb-content-main"">
+                    <div class=""hpb-content"">
+                        <h2>John Doe</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <div class=""hpb-info"">
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-user""></i> <em>Admin</em>
+                        </span>
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-calendar"" aria-hidden=""true""></i> <em>22 May, 2016</em>
+                        </span>
+                        <span class=""readmore"">
+                            <a href=""#"">Read More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class=""hpb-inner"">
+                <div class=""hpb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-250.png""}}"" alt=""img-400-250"" />
+                    </a>
+                </div>
+                <div class=""hpb-content-main"">
+                    <div class=""hpb-content"">
+                        <h2>John Doe</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <div class=""hpb-info"">
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-user""></i> <em>Admin</em>
+                        </span>
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-calendar"" aria-hidden=""true""></i> <em>22 May, 2016</em>
+                        </span>
+                        <span class=""readmore"">
+                            <a href=""#"">Read More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class=""hpb-inner"">
+                <div class=""hpb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-250.png""}}"" alt=""img-400-250"" />
+                    </a>
+                </div>
+                <div class=""hpb-content-main"">
+                    <div class=""hpb-content"">
+                        <h2>John Doe</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <div class=""hpb-info"">
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-user""></i> <em>Admin</em>
+                        </span>
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-calendar"" aria-hidden=""true""></i> <em>22 May, 2016</em>
+                        </span>
+                        <span class=""readmore"">
+                            <a href=""#"">Read More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class=""hpb-inner"">
+                <div class=""hpb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-400-250.png""}}"" alt=""img-400-250"" />
+                    </a>
+                </div>
+                <div class=""hpb-content-main"">
+                    <div class=""hpb-content"">
+                        <h2>John Doe</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <div class=""hpb-info"">
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-user""></i> <em>Admin</em>
+                        </span>
+                        <span class=""hpb-poster"">
+                            <i class=""fa fa-calendar"" aria-hidden=""true""></i> <em>22 May, 2016</em>
+                        </span>
+                        <span class=""readmore"">
+                            <a href=""#"">Read More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>",1,0
+Home Testimonials,home_testimonials,"<div class=""htb-main pad-main"">
+    <div class=""block-title-main"">
+        <h2>What Our Customer Says</h2>
+        <div class=""title-border""></div>
+    </div>
+    <div class=""htb-main"">
+        <div class=""htb-content htb-slider"">
+            <div class=""htb-inner"">
+                <div class=""htb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-85-85.png""}}"" alt=""img-85-85"" />
+                    </a>
+                </div>
+                <div class=""htb-content-inner"">
+                    <p>
+                        <em>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </em>
+                    </p>
+                    <div class=""htb-sept""></div>
+                    <div class=""htb-info"">
+                        <div class=""htb-name"">
+                            John Doe
+                        </div>
+                        <p>
+                            CEO
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=""htb-inner"">
+                <div class=""htb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-85-85.png""}}"" alt=""img-85-85"" />
+                    </a>
+                </div>
+                <div class=""htb-content-inner"">
+                    <p>
+                        <em>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </em>
+                    </p>
+                    <div class=""htb-sept""></div>
+                    <div class=""htb-info"">
+                        <div class=""htb-name"">
+                            John Doe
+                        </div>
+                        <p>
+                            Developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=""htb-inner"">
+                <div class=""htb-img"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-85-85.png""}}"" alt=""img-85-85"" />
+                    </a>
+                </div>
+                <div class=""htb-content-inner"">
+                    <p>
+                        <em>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </em>
+                    </p>
+                    <div class=""htb-sept""></div>
+                    <div class=""htb-info"">
+                        <div class=""htb-name"">
+                            John Doe
+                        </div>
+                        <p>
+                            Designer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+",1,0
+Home Brands,home_brands,"<div class=""hbr-main pad-main"">
+    <div class=""block-title-main"">
+        <h2>Our Brands</h2>
+        <div class=""title-border""></div>
+    </div>
+    <div class=""hbr-main"">
+        <div style=""margin: 0 -10px"">
+            <div class=""hbr-content hbr-slider"">
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+                <div class=""hbr-inner"">
+                    <a href=""#"">
+                        <img class=""img-resp center-b"" src=""{{media url=""wysiwyg/home/img-232-86.png""}}"" alt=""img-232-86"" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>",1,0
+Footer Theme Features,footer_theme_features,"<ul>
+            <li><a href=""#""><em class=""fa fa-check""></em>&nbsp;&nbsp;&nbsp;Premium Magento 2 theme</a></li>
+            <li><a href=""#""><em class=""fa fa-check""></em>&nbsp;&nbsp;&nbsp;Fully responsive</a></li>
+            <li><a href=""#""><em class=""fa fa-check""></em>&nbsp;&nbsp;&nbsp;Powerful admin panel</a></li>
+            <li><a href=""#""><em class=""fa fa-check""></em>&nbsp;&nbsp;&nbsp;2 unique homepage layouts</a></li>
+            <li><a href=""#""><em class=""fa fa-check""></em>&nbsp;&nbsp;&nbsp;Available in 6 colors</a></li>
+        </ul>",1,0
+Footer Our Services,footer_our_services,"<div class=""fs-row"">
+            <div class=""fs-inner"">
+                <div class=""fs-left"">
+                    <i class=""fa fa-car"" aria-hidden=""true""></i>
+                </div>
+                <div class=""fs-right"">
+                    <h3>Free Shipping</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sedeiusmod.</p>
+                </div>
+            </div>
+            <div class=""fs-inner"">
+                <div class=""fs-left"">
+                    <i class=""fa fa-life-ring"" aria-hidden=""true""></i>
+                </div>
+                <div class=""fs-right"">
+                    <h3>Online Support</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sedeiusmod.</p>
+                </div>
+            </div>
+            <div class=""fs-inner"">
+                <div class=""fs-left"">
+                    <i class=""fa fa-money"" aria-hidden=""true""></i>
+                </div>
+                <div class=""fs-right"">
+                    <h3>Money Back Guarantee</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sedeiusmod.</p>
+                </div>
+            </div>
+        </div>",1,0

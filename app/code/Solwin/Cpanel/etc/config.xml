@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <cpanelsection>
+            <layoutgroup>
+                <layoutname>black</layoutname>
+            </layoutgroup>
+            <headergroup>
+                <top_header_notification>Get free shipping on order over $99!</top_header_notification>
+                <sharingaddon>0</sharingaddon>
+                <pubid></pubid>
+                <addhomelink>1</addhomelink>
+            </headergroup>
+            <footergroup>
+                <shownewsletter>1</shownewsletter>
+                <footer_newsletter_title>Newsletter</footer_newsletter_title>
+                <footer_newsletter_text>Sign up to be the first to hear about us</footer_newsletter_text>
+                <footer_logo></footer_logo>
+                <showsocial>1</showsocial>
+                <showfacebook>1</showfacebook>
+                <facebook_link>#</facebook_link>
+                <showtwitter>1</showtwitter>
+                <twitter_link>#</twitter_link>
+                <showlinkedin>1</showlinkedin>
+                <linkedin_link>#</linkedin_link>
+                <showpinterest>1</showpinterest>
+                <pinterest_link>#</pinterest_link>
+            </footergroup>
+            <listpagegroup>
+                <newlabel>1</newlabel>
+                <salelabel>1</salelabel>
+            </listpagegroup>
+            <viewpagegroup>
+                <sharingaddon>0</sharingaddon>
+                <pubid></pubid>
+                <showproducts>1</showproducts>
+            </viewpagegroup>
+            <contactpagegroup>
+                <showgooglemap>0</showgooglemap>
+                <embedcode>#</embedcode>
+                <storename>mystore</storename>
+                <storeaddress>101 street, cityname, country</storeaddress>
+                <contactinfo>(+91) 1234567890</contactinfo>
+                <storeemail>info@solwininfotech.com</storeemail>
+            </contactpagegroup>
+        </cpanelsection>
+    </default>
+</config>

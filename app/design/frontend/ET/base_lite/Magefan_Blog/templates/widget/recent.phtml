@@ -1,0 +1,78 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog recent posts widget
+ *
+ * @var $block \Magefan\Blog\Block\Widget\Recent
+ */
+?>
+
+<?php
+$_postCollection = $block->getPostCollection();
+$randNum = rand(1000, 1000000);
+?>
+<?php if ($_postCollection->count()) { ?>
+    <div class="blogs-wrapper">
+        <div class="page-main">
+            <div class="section-title">
+                <span><?php echo htmlspecialchars_decode($block->getTitle()); ?></span>
+            </div>
+            <div class="content-main">
+                <div class="item-row">
+                    <div id="home-blogslider" class="home-recent-blog-slider items owl-carousel owl-theme">
+                        <?php foreach ($_postCollection as $_post) { ?>
+                            <?php
+                            $_postUrl = $block->escapeUrl($_post->getPostUrl());
+                            $_postName = $block->escapeHtml($_post->getTitle());
+                            ?>
+                            <div class="item post-<?= (int) $_post->getId() ?>" style="display: none;">
+                                <div class="item-inner">
+                                    <div class="img-block">
+                                        <?php $featuredImage = $_post->getFeaturedListImage() ?: $_post->getFeaturedImage(); ?>
+                                        <?php if ($featuredImage) { ?>
+                                            <?php
+                                            $featuredImgAlt = $_post->getData('featured_list_img_alt') ?: $_post->getData('featured_img_alt');
+                                            if (!$featuredImgAlt) {
+                                                $featuredImgAlt = $_postName;
+                                            }
+                                            ?>
+                                            <a href="<?= /* @noEscape */ $_postUrl ?>" title="<?= /* @noEscape */ $_postName ?>">
+                                                <img src="<?= $block->escapeHtml($featuredImage) ?>"
+                                                     alt="<?= $block->escapeHtml($featuredImgAlt) ?>" />
+                                            </a>
+                                            <?php if ($_post->isPublishDateEnabled()) { ?>
+                                                <div class="post-date">
+                                                    <span><?= $block->escapeHtml($_post->getPublishDate()) ?></span>
+                                                </div>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="info-block">
+                                        <div class="post-title">
+                                            <a class="post-item-link" href="<?= /* @noEscape */ $_postUrl ?>">
+                                                <?= /* @noEscape */ $_postName ?>
+                                            </a>
+                                        </div>
+                                        <div class="post-text">
+                                            <?= /* @noEscape */ $block->getShorContent($_post) ?>
+                                        </div>
+                                        <a class="action primary" href="<?= /* @noEscape */ $_postUrl ?>" title="<?= /* @noEscape */ $_postName ?>">
+                                            <?= $block->escapeHtml(__('Read more')) ?>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>

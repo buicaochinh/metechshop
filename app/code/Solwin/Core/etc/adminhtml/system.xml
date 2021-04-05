@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Solwin Infotech
+ *
+ * @category   Solwin
+ * @package    Solwin_Core
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="solwin_extension_tab" translate="label" sortOrder="100" class="solwin_solwin_logo">
+            <label>Solwin</label>
+        </tab>
+    </system>
+</config>
