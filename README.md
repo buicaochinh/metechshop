@@ -23,13 +23,6 @@ Welcome to Magento 2 installation! We're glad you chose to install Magento 2, a 
 
 [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
 
-## Install Magento
-
-* [Installation Guide](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html).
-
-## Learn More About GraphQL in Magento 2
-
-* [GraphQL Developer Guide](https://devdocs.magento.com/guides/v2.4/graphql/index.html)
 
 ## Contributing to the Magento 2 Code Base
 
@@ -45,18 +38,6 @@ To suggest documentation improvements, click [here][4].
 [2]: https://devdocs.magento.com/guides/v2.4/contributor-guide/contributing.html#report
 [3]: https://github.com/magento/magento2/issues
 [4]: https://devdocs.magento.com
-
-### Community Maintainers
-
-The members of this team have been recognized for their outstanding commitment to maintaining and improving Magento. Magento has granted them permission to accept, merge, and reject pull requests, as well as review issues, and thanks to these Community Maintainers for their valuable contributions.
-
-[![](https://raw.githubusercontent.com/wiki/magento/magento2/images/maintainers.png)](https://magento.com/magento-contributors#maintainers)
-
-### Top Contributors
-
-Magento is thankful for any contribution that can improve our codebase, documentation or increase test coverage. We always recognize our most active members, as their contributions are the foundation of the Magento Open Source platform.
-
-[![](https://raw.githubusercontent.com/wiki/magento/magento2/images/contributors.png)](https://magento.com/magento-contributors)
 
 ### Labels Applied by the Magento Team
 
@@ -89,3 +70,15 @@ We have channels for each project. These channels are recommended for new member
 * [github](https://magentocommeng.slack.com/messages/C7KB93M32): Support for GitHub issues, pull requests, and processes
 * [public-backlog](https://magentocommeng.slack.com/messages/CCV3J3RV5): Discussions of the Magento 2 backlog
 # e-commerce-magento2-docker
+## First step
+```
+sudo chown -R 1000:1000 .
+```
+## Run project
+```
+docker-compose up -d
+```
+## Stop project
+```
+docker-compose down
+```
