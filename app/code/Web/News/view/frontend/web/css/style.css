@@ -1,0 +1,35 @@
+.group{
+    width: 1000px;
+    margin:  11px auto;
+}
+
+.groupItem{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.item_news{
+    display: block;
+    width: 200px;
+}
+.title{
+    height: 65px;
+    overflow: hidden;
+}
+.image_news{
+    margin: 0 auto;
+}
+.image_news img{
+    width: 180px;
+    height: 150px;
+}
+@media screen and (max-width:1000px){
+    .item_news{
+        width: 33%;
+    }
+}
+@media screen and (max-width:600px){
+    .item_news{
+        width: 50%;
+    }
+}
