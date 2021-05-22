@@ -1,0 +1,59 @@
+<?php
+function recurseXML($xml)
+{
+    foreach($xml as $key0 => $value)
+    {
+        if($key0 =='Exrate')
+        {           
+            echo "\n<tr >\n";                   
+            foreach($value->attributes() as $attributeskey0 => $attributesvalue1)
+            {    
+                echo " <td> $attributesvalue1</td>\n";  
+            }
+            echo "</tr>\n\n";
+        }   
+        else{ 
+            $date = $value;
+        }    
+    }
+}
+
+function datetime($xml)
+{
+    $date="";
+    foreach($xml as $key0 => $value)
+    {
+        if($key0 =='DateTime')
+        {           
+            $date = $value;
+        }   
+    }
+    return $date;
+}
+$xml = simplexml_load_file("http://www.vietcombank.com.vn/ExchangeRates/ExrateXML.aspx");
+
+
+?>
+  <div class="time"> Thời gian : <?php echo datetime($xml) ;?>     </div>
+<div style="background: #FFF;  border-radius: 5px 5px; display:flex;">
+    <table class="tbl-01 rateTable" cellspacing="1" border="1" id="ctl00_Content_ExrateView">
+        <thead>
+            <tr class="classth fontS-11">
+                <th>MÃ NGOẠI TỆ	</th>
+                <th>TÊN NGOẠI TỆ</th>
+                <th> MUA TIỀN MẶT </th>
+                <th> MUA CHUYỂN KhOẢN </th>
+                <th> MUA TIỀN MẶT </th>
+            </tr>
+
+        </thead>
+        <tbody>
+           
+            <?php
+            recurseXML($xml);
+            ?>
+      
+        </tbody>
+    </table>
+    
+     </div>

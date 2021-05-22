@@ -1,0 +1,31 @@
+<?php
+$xml = simplexml_load_file("https://vnexpress.net/rss/kinh-doanh.rss");
+$item = $xml -> channel-> item;
+
+function recurseXML($item)
+{             
+           
+            foreach($item as $key => $value)
+            {
+              echo "<div class = \"item_news\">
+              <h3  class = \"title \" >$value->title</h3>
+              <em>$value->pubDate </em>
+                <div class = \"image_news \">
+                 $value->description
+                 </div>
+                  <br>
+                  <a class = \"link_news \" href= $value->guid  target= \"_blank\">Đọc tiếp</a>
+              </div>
+              ";
+            }
+}
+
+?>
+<div class="group">
+<div class="groupItem">
+<?php
+recurseXML($item);
+?>
+</div>
+</div>
+
