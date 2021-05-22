@@ -79,6 +79,13 @@ services:
     restart: always
     networks:
       - magento
+  redis:
+    restart: always
+    image: redis
+    expose:
+      - "6379"
+    networks:
+      - magento
 
 volumes:
   esdata:
