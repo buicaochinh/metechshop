@@ -62,6 +62,12 @@ services:
       - magento
   elasticsearch:
     image: "docker.elastic.co/elasticsearch/elasticsearch:7.9.1"
+    deploy:
+      resources:
+        limits:
+          memory: 50M
+        reservations:
+          memory: 20M
     environment:
       - "discovery.type=single-node"
       - cluster.name=docker-cluster
