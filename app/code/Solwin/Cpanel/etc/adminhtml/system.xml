@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="cpanel" translate="label" sortOrder="100" class="solwin_freego_logo">
+            <label>Freego</label>
+        </tab>
+        <section id="cpanelsection" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Theme Settings</label>
+            <tab>cpanel</tab>
+            <resource>Solwin_Cpanel::cpanelsetting</resource>
+            <group id="layoutgroup" translate="label" type="select" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Layout</label>
+                <field id="layoutname" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Layout</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Layoutname</source_model>
+                </field>
+            </group>
+            <group id="headergroup" translate="label" type="select" sortOrder="19" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header</label>
+                <field id="top_header_notification" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Top Header Notification</label>
+                </field>
+                <field id="sharingaddon" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sharing Addon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pubid" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Addthis Pub ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[You can get pub id from http://www.addthis.com ]]></comment>
+                    <depends>
+                        <field id="sharingaddon">1</field>
+                    </depends>
+                </field>
+                <field id="addhomelink" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Home Link In Navigation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="footergroup" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer</label>
+                <field id="shownewsletter" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Newsletter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_newsletter_title" translate="label" type="text" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Newsletter Block Title</label>
+                    <depends>
+                        <field id="shownewsletter">1</field>
+                    </depends>
+                </field>
+                <field id="footer_newsletter_text" translate="label" type="text" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Newsletter Block Text</label>
+                    <depends>
+                        <field id="shownewsletter">1</field>
+                    </depends>
+                </field>
+                <field id="footer_logo" translate="label comment" type="image" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Logo</label>
+                    <backend_model>Solwin\Cpanel\Model\Source\Image</backend_model>
+                    <comment><![CDATA[Allow file formats are *.jpg, *.jpeg, *.png, *.gif.<style>
+                        #cpanelsection_footergroup_footer_logo_image {
+                            width: 100px;
+                            height: auto;
+                        }
+                        #cpanelsection_footergroup_footer_logo {
+                            display: block;
+                        }
+                        #cpanelsection_footergroup_footer_logo_delete {
+                            vertical-align: bottom;
+                        }
+                    </style>]]></comment>
+                    <base_url type="media" scope_info="1">social</base_url>
+                </field>
+                <field id="showsocial" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Social Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="showfacebook" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Facebook</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="facebook_link" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your facebook url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showfacebook">1</field>
+                    </depends>
+                </field>
+                <field id="showtwitter" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Twitter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="twitter_link" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your twitter url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showtwitter">1</field>
+                    </depends>
+                </field>
+                <field id="showlinkedin" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Linkedin</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="linkedin_link" translate="label" type="text" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Linkedin Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your linkedin url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showlinkedin">1</field>
+                    </depends>
+                </field>
+                <field id="showpinterest" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Pinterest</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="pinterest_link" translate="label" type="text" sortOrder="75" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your pinterest url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showpinterest">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="listpagegroup" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product List Page</label>
+                <field id="newlabel" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show New Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="salelabel" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sale Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="viewpagegroup" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product View Page</label>
+                <field id="sharingaddon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sharing addon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pubid" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Addthis Pub ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[You can get pub id from http://www.addthis.com ]]></comment>
+                    <depends>
+                        <field id="sharingaddon">1</field>
+                    </depends>
+                </field>
+                <field id="showproducts" translate="label" type="select" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Related, Upsell And Crosssell Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="contactpagegroup" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Contact Page</label>
+                <field id="showgooglemap" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Google Map</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="embedcode" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Map Embeded Code</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="showgooglemap">1</field>
+                    </depends>
+                </field>
+                <field id="storename" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Name</label>
+                </field>
+                <field id="storeaddress" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Address</label>
+                </field>
+                <field id="contactinfo" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Contact No.</label>
+                </field>
+                <field id="storeemail" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Email</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

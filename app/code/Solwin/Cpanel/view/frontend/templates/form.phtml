@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$showgooglemap = $helper->getShowrgooglemap();
+?>
+<div class="c-add">
+    <?php
+    $storename = $helper->getContactstorename();
+    $storeaddress = $helper->getContactstoreaddress();
+    $contactinfo = $helper->getStorecontactno();
+    $storeemail = $helper->getStorecontactemail();
+    ?>
+    <h2 class="cs-name"><?php echo $storename; ?> </h2>
+    <div class="cs-info">
+        <span>
+            <i class="fa fa-map-marker"></i>
+        </span>
+        <b>Address</b>
+        <div>
+            <?php echo $storeaddress; ?>
+        </div>
+    </div>
+    <div class="cs-info">
+        <span>
+            <i class="fa fa-phone"></i>
+        </span>
+        <b>Phone</b>
+        <div>
+            <?php echo $contactinfo; ?>
+        </div>
+    </div>
+    <div class="cs-info">
+        <span>
+            <i class="fa fa-envelope"></i>
+        </span>
+        <b>Email</b>
+        <div>
+            <a href="mailto:<?php echo $storeemail; ?>">
+                <?php echo $storeemail; ?>
+            </a>
+        </div>
+    </div>
+</div>
+<?php if ($showgooglemap == "1") { ?>
+    <?php $embedcode = $helper->getGooglemapembedcode(); ?>
+    <div class="contact-map" style="margin:30px 0 20px;float: left;width:100%;">
+        <iframe style="border: 0;" src="<?php echo $embedcode; ?>" frameborder="0" width="100%" height="400px"></iframe>
+    </div>
+<?php } ?>
+<style>
+.contact-index-index #contact-form {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+</style>

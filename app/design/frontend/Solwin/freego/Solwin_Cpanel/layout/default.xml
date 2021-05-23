@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Solwin_Cpanel::css/owl.carousel.css"/>
+        <css src="Solwin_Cpanel::css/owl.theme.css"/>
+        <css src="Solwin_Cpanel::css/owl.transitions.css"/>
+        <css src="Solwin_Cpanel::css/fancybox/jquery.fancybox.css"/>
+        <css src="Solwin_Cpanel::css/font-awesome.min.css"/>
+    </head>
+    <body>
+        
+    </body>
+</page>

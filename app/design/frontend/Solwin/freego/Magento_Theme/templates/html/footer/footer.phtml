@@ -1,0 +1,144 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<!--[if IE ]>
+  <link href="iecss.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$showsocial = $helper->getShowsocialicons();
+
+$baseUrl = $helper->getBaseUrl();
+$mediaurl = $helper->getMediaUrl() . 'social/';
+$f_logo = $helper->getFooterlogo();
+$footer_logo = $mediaurl . $helper->getFooterlogo();
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$mediasocialurl = $helper->getMediaUrl() . 'social/';
+$newsletter_title = $helper->getFooternewslettertitle();
+$newsletter_text = $helper->getFooternewslettertext();
+$newsletter_show = $helper->getShowfooternewsletter();
+?>
+<div class="page-footer">
+    <div class="fs-main pad-main">
+        <div class="page-main">
+            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_our_services')->toHtml(); ?>
+        </div>
+    </div>
+    <div class="page-main">
+        <div class="cp-footer-container">
+            <div class="cp-footer-main">
+                <div class="cp-fblock">
+                    <div class="cp-fcontent">
+                        <?php if ($f_logo != '') { ?>
+                            <a class="logo" href="<?php echo $baseUrl; ?>">
+                                <img src="<?php echo $footer_logo; ?>" alt="Logo">
+                            </a>
+                        <?php } ?>
+                        <?php
+                        if ($showsocial) {
+                            $showfacebook = $helper->getShowfacebook();
+                            $showtwitter = $helper->getShowtwitter();
+                            $showlinkedin = $helper->getShowlinkedin();
+                            $showpinterest = $helper->getShowpinterest();
+                            ?>
+                            <ul class="cp-social">
+                                <?php if ($showfacebook) { ?>
+                                    <li><a href="<?php echo $helper->getFacebookurl(); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <?php } ?>
+                                <?php if ($showtwitter) { ?>
+                                    <li><a href="<?php echo $helper->getTwitterurl(); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <?php } ?>
+                                <?php if ($showlinkedin) { ?>
+                                    <li><a href="<?php echo $helper->getLinkdnurl(); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <?php } ?>
+                                <?php if ($showpinterest) { ?>
+                                    <li><a href="<?php echo $helper->getPinteresturl(); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                <?php } ?>
+                            </ul>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="cp-footer-main">
+                <div class="cp-fblock">
+                    <div class="cp-ftitle">
+                        <h3>
+                            <?php echo __('Information') ?>
+                        </h3>
+                    </div>
+                    <div class="cp-fcontent">
+                        <?php echo $this->getChildHtml('footer_links'); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="cp-footer-main">
+                <div class="cp-fblock">
+                    <div class="cp-ftitle">
+                        <h3>
+                            <?php echo __('Contact Information') ?>
+                        </h3>
+                    </div>
+                    <div class="cp-fcontent">
+                        <ul>
+                            <li>
+                                <div class="cp-fcontact">
+                                    <span><i class="fa fa-map-marker"></i></span>
+                                    <div><b>Address</b></div>
+                                    <div><?php echo $helper->getContactstoreaddress(); ?></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cp-fcontact">
+                                    <span><i class="fa fa-phone"></i></span>
+                                    <div><b>Phone</b></div>
+                                    <div><?php echo $helper->getStorecontactno(); ?></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cp-fcontact">
+                                    <span><i class="fa fa-envelope"></i></span>
+                                    <div><b>Email</b></div>
+                                    <div><a href="mailto:<?php echo $helper->getStorecontactemail(); ?>"><?php echo $helper->getStorecontactemail(); ?></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <?php if ($newsletter_show) { ?>
+            <div class="cp-footer-main">
+                <div class="cp-fblock">
+                    <div class="cp-ftitle">
+                        <h3>
+                            <?php echo $newsletter_title; ?>
+                        </h3>
+                        <p>
+                            <?php echo $newsletter_text; ?>
+                        </p>
+                    </div>
+                    <div class="cp-fcontent">
+                        <?php echo $this->getChildHtml('footer.newsletter'); ?>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<?php
+$enable = $helper->getShowsharingaddon();
+$pubid = $helper->getAddthispubid();
+
+if ($enable) {
+    ?>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $pubid; ?>" async="async"></script>
+<?php } ?>

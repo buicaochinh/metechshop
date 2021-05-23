@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Solwin_Cpanel::view" title="FreeGo Theme Cpanel" module="Solwin_Cpanel" sortOrder="10" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Cpanel::extension" title="Theme Cpanel" module="Solwin_Cpanel" sortOrder="5" parent="Solwin_Cpanel::view" resource="Solwin_Cpanel::view" />
+        <add id="Solwin_Cpanel::cpanelsetting" title="Configuration" module="Solwin_Cpanel" sortOrder="20" parent="Solwin_Cpanel::extension" action="adminhtml/system_config/edit/section/cpanelsection" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Add::add" title="Solwin Extensions" module="Solwin_Cpanel" sortOrder="20" resource="Solwin_Cpanel::view" parent="Solwin_Cpanel::view"/>
+        <add id="Solwin_Addimage::addimage" title="Sale" module="Solwin_Cpanel" sortOrder="20" parent="Solwin_Add::add" resource="Solwin_Add::addimage"/>
+        <add id="Solwin_Add::add_two" title="Solwin Extensions" module="Solwin_Cpanel" sortOrder="20" resource="Solwin_Cpanel::view" parent="Solwin_Cpanel::view"/>
+        <add id="Solwin_Addimage::addimage_two" title="Sale" module="Solwin_Cpanel" sortOrder="20" parent="Solwin_Add::add_two" resource="Solwin_Add::addimage_two"/>
+    </menu>
+</config>

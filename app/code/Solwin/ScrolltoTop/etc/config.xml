@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin ScrolltoTop Extension
+
+@category   Solwin
+@package    Solwin_ScrolltoTop
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <scrollsection>
+            <scrollgroup>
+                <active>1</active>
+                <display>1</display>
+                <position>1</position>
+                <link_text>Top</link_text>
+                <bgclr>ffffff</bgclr>
+                <bghoverclr>000000</bghoverclr>
+                <textclr>333333</textclr>
+                <texthoverclr>ffffff</texthoverclr>
+                <link_image></link_image>
+                <link_hover_image></link_hover_image>
+            </scrollgroup>
+        </scrollsection>
+    </default>
+</config>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Solwin Infotech
+ * Solwin Sold Out Label Extension
+ *
+ * @category   Solwin
+ * @package    Solwin_Soldout
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Solwin_Soldout::css/soldout.css"/>
+    </head>
+    <body>
+        <referenceBlock name="category.products.list">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Magento_Catalog::product/list.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

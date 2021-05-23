@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin ScrolltoTop Extension
+
+@category   Solwin
+@package    Solwin_ScrolltoTop
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="scrollsection" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Scroll to Top</label>
+            <tab>solwin_extension_tab</tab>
+            <resource>Solwin_ScrolltoTop::scrolltotop</resource>
+            <group id="scrollgroup" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="active" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <!--Display-->
+                <field id="display" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display</label>
+                    <source_model>Solwin\ScrolltoTop\Model\Source\Display</source_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <!--Text on Link-->
+                <field id="link_text" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text on Link</label>
+                    <depends>
+                        <field id="active">1</field>
+                        <field id="display" separator=",">1,3</field>
+                    </depends>
+                </field>
+                <!--Image for Link-->
+                <field id="link_image" translate="label" type="image" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image for Link</label>
+                    <comment><![CDATA[Allowed file types: jpg, jpeg, gif, png.]]></comment>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">scrolltotop</upload_dir>
+                    <base_url type="media" scope_info="1">scrolltotop</base_url>
+                    <depends>
+                        <field id="active">1</field>
+                        <field id="display" separator=",">2,3</field>
+                    </depends>
+                </field>
+                <!--Image for Hover Link-->
+                <field id="link_hover_image" translate="label" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image for Hover Link</label>
+                    <comment><![CDATA[Allowed file types: jpg, jpeg, gif, png.]]></comment>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">scrolltotop</upload_dir>
+                    <base_url type="media" scope_info="1">scrolltotop</base_url>
+                    <depends>
+                        <field id="active">1</field>
+                        <field id="display" separator=",">2,3</field>
+                    </depends>
+                </field>
+                <!--select Position-->
+                <field id="position" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                    <source_model>Solwin\ScrolltoTop\Model\Source\Position</source_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <!--Background Color-->
+                <field id="bgclr" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <backend_model>Solwin\ScrolltoTop\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\ScrolltoTop\Block\Color</frontend_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <!--Background Hover Color-->
+                <field id="bghoverclr" translate="label" type="text" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Hover Color</label>
+                    <backend_model>Solwin\ScrolltoTop\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\ScrolltoTop\Block\Color</frontend_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <!--Text Color-->
+                <field id="textclr" translate="label" type="text" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Color</label>
+                    <backend_model>Solwin\ScrolltoTop\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\ScrolltoTop\Block\Color</frontend_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <!--Text Hover Color-->
+                <field id="texthoverclr" translate="label" type="text" sortOrder="19" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Hover Color</label>
+                    <comment><![CDATA[
+  <style>
+  #scrollsection_scrollgroup_link_image_image ,
+  #scrollsection_scrollgroup_link_hover_image_image{
+      width: 100px;
+      height: auto;
+  }
+  #scrollsection_scrollgroup_link_image,#scrollsection_scrollgroup_link_hover_image {
+    display: block;
+  }
+  #scrollsection_scrollgroup_link_image_delete,#scrollsection_scrollgroup_link_hover_image_delete {
+    vertical-align: middle;
+  }
+</style>]]></comment>
+                    <backend_model>Solwin\ScrolltoTop\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\ScrolltoTop\Block\Color</frontend_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

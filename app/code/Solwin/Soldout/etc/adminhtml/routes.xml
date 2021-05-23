@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin Sold Out Label Extension
+
+@category   Solwin
+@package    Solwin_Soldout
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/ 
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="admin">
+        <route id="solwin_outofstock" frontName="solwin_outofstock">
+            <module name="Solwin_Soldout" before="Magento_Backend"/>
+        </route>
+    </router>
+</config>

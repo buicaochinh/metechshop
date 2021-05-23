@@ -1,0 +1,41 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ? : 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$baseUrl = $helper->getBaseUrl();
+$curr_Url = $helper->getCurrentUrl();
+$ishome = $helper->getIsHomePage();
+$showhomelink = $helper->getEnablehomelink();
+?>
+
+<nav class="navigation" role="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?php if ($showhomelink) { ?>
+            <li class="level0 level-top <?php if ($ishome) { ?> active <?php } ?>">
+                <a class="level-top" href="<?php echo $baseUrl; ?>">
+                    Home
+                </a>
+            </li>
+        <?php } ?>
+        <?php /* @escapeNotVerified */ echo $_menu; ?>
+    </ul>
+</nav>
+<style>
+.navigation .level0 .submenu li.parent > a::after {
+    display:none;
+}
+</style>

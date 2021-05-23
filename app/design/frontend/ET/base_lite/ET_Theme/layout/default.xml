@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="ET_Base::css/owl.carousel.min.css"/>
+        <css src="ET_Base::css/owl.theme.default.min.css"/>
+        <css src="ET_Base::css/font-awesome.min.css"/>
+        <link src="ET_Theme::js/theme.js"/>
+    </head>
+    <body>
+        <referenceContainer name="head.additional">
+            <block class="Magento\Framework\View\Element\Template" name="theme.head" template="ET_Theme::html/head.phtml" before="-"/>
+        </referenceContainer>
+        
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="scroll.top" template="ET_Theme::scrolltop.phtml" />
+        </referenceContainer>
+        
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="theme_header" template="ET_Theme::html/header.phtml" before="main.content">
+                <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml">
+                    <arguments>
+                        <argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="et.top.promotion" template="ET_Theme::html/promotion.phtml" />
+            </block>
+        </referenceContainer>
+        
+        <move element="minicart" destination="theme_header" />
+        <move element="top.search" destination="theme_header" />
+        <move element="logo" destination="theme_header" />
+        <move element="compare-link-wrapper" destination="theme_header" />
+        <move element="skip_to_content" destination="theme_header" />
+        <move element="store_language" destination="theme_header" />
+        <move element="currency" destination="theme_header" />
+        <move element="header.links" destination="theme_header" />
+        <move element="navigation.sections" destination="theme_header" />
+        <move element="page.top" destination="page.wrapper" after="theme_header" />
+        
+        <move element="wish-list-link" destination="header.links" after="header" />
+
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="header.panel" remove="true" />
+        <referenceContainer name="header-wrapper" remove="true" />
+        
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="theme_footer" before="-" template="ET_Theme::html/footer.phtml" />
+        </referenceContainer>
+    </body>
+</page>

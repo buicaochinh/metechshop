@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="ET_Theme::etrend" title="Etrend Theme" module="ET_Theme" sortOrder="65" resource="ET_Theme::theme"/>
+        
+        <add id="ET_Theme::etrendconfig" title="Configuration" module="ET_Theme" parent="ET_Theme::etrend" sortOrder="5" resource="ET_Promotionbar::view"/>
+        <add id="ET_Theme::themeconfig" title="Theme" module="ET_Theme" parent="ET_Theme::etrendconfig" sortOrder="5" action="adminhtml/system_config/edit/section/theme_section" resource="ET_Theme::themeconfig"/>
+        <add id="ET_Theme::headerconfig" title="Header" module="ET_Theme" parent="ET_Theme::etrendconfig" sortOrder="15" action="adminhtml/system_config/edit/section/header_section" resource="ET_Theme::headerconfig"/>
+        <add id="ET_Theme::footerconfig" title="Footer" module="ET_Theme" parent="ET_Theme::etrendconfig" sortOrder="20" action="adminhtml/system_config/edit/section/footer_section" resource="ET_Theme::footerconfig"/>
+        <add id="ET_Theme::categoryconfig" title="Product List" module="ET_Theme" parent="ET_Theme::etrendconfig" sortOrder="25" action="adminhtml/system_config/edit/section/category_section" resource="ET_Theme::categoryconfig"/>
+        <add id="ET_Theme::productconfig" title="Product Detail" module="ET_Theme" parent="ET_Theme::etrendconfig" sortOrder="30" action="adminhtml/system_config/edit/section/product_section" resource="ET_Theme::productconfig"/>
+        <add id="ET_Theme::contactconfig" title="Contact" module="ET_Theme" parent="ET_Theme::etrendconfig" sortOrder="35" action="adminhtml/system_config/edit/section/contact_section" resource="ET_Theme::contactconfig"/>
+    </menu>
+</config>

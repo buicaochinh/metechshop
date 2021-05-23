@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+
+@category   Solwin
+@package    Solwin_Core
+@copyright  Copyright © 2006-2018 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Solwin_Extensions::extensions" title="Solwin" module="Magento_Backend" sortOrder="10" resource="Solwin_Extensions::extensions" />
+    </menu>
+</config>

@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php if ($_products = $block->getRecentlyComparedProducts()): ?>
+    <div class="block-title-main">
+        <h2><?php /* @escapeNotVerified */ echo __('Recently Compared') ?></h2>
+        <div class="title-border"></div>
+    </div>
+    <div style="float: left;width:100%;" class="block pad-main-bottom widget block-compared-products-names">
+        <div class="block-content">
+            <?php $suffix = $block->getNameInLayout(); ?>
+            <ol style="margin: 30px 0 0;" id="widget-compared-<?php /* @escapeNotVerified */ echo $suffix; ?>" class="product-items product-items-names">
+                <?php
+                $i = 0;
+                foreach ($_products as $_product):
+                    ?>
+                    <li class="product-item">
+                        <strong class="product-item-name">
+                            <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product-item-link">
+                                <?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($_product, $_product->getName(), 'name') ?>
+                            </a>
+                        </strong>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+        </div>
+    </div>
+<?php endif; ?>

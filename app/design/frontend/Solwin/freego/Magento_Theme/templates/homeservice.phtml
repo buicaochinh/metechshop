@@ -1,0 +1,7 @@
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$ishome = $helper->getIsHomePage();
+if ($ishome) {
+    echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('homeserviceblock')->toHtml();
+}
+?>

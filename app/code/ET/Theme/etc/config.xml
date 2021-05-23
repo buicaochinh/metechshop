@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <web>
+            <default>
+                <cms_home_page>etlite_home</cms_home_page>
+            </default>
+        </web>
+        <cms>
+            <wysiwyg>
+                <enabled>hidden</enabled>
+            </wysiwyg>
+        </cms>
+        <theme_section>
+            <scrolltop>
+                <enable>1</enable>
+            </scrolltop>
+            <addthis>
+                <enable>0</enable>
+                <pubid></pubid>
+            </addthis>
+        </theme_section>
+        <header_section>
+            <general>
+                <header_static_block>et_header_contact_info</header_static_block>
+                <header_top_static_block><![CDATA[Etrend - The #1 Responsive Magento 2 Theme.]]></header_top_static_block>
+                <display_icons>0</display_icons>
+            </general>
+            <megamenu>
+                <show_home_link>1</show_home_link>
+            </megamenu>
+        </header_section>
+        <footer_section>
+            <footer_top>
+                <static_block>et_footer_top_newsletter</static_block>
+            </footer_top>
+            <footer_middle>
+                <column_one_static_block>et_footer_contact_info</column_one_static_block>
+                <column_two_static_block>et_footer_my_account</column_two_static_block>
+                <column_three_static_block>et_footer_quicklinks</column_three_static_block>
+                <column_four_static_block>et_footer_customer_services</column_four_static_block>
+                <footer_middle_static_block>et_footer_logo_socials</footer_middle_static_block>
+            </footer_middle>
+            <footer_bottom>
+                <left_static_block>et_footer_copyright</left_static_block>
+                <right_static_block>et_payment_icons</right_static_block>
+            </footer_bottom>
+        </footer_section>
+        <category_section>
+            <product_labels>
+                <show_new_label>1</show_new_label>
+                <show_sale_label>1</show_sale_label>
+            </product_labels>
+        </category_section>
+        <product_section>
+            <general>
+                <show_new_label>1</show_new_label>
+                <show_sale_label>1</show_sale_label>
+            </general>
+            <custom_tabs>
+                <enable_tab_one>1</enable_tab_one>
+                <custom_tab_one_type>cmsblock</custom_tab_one_type>
+                <custom_tab_one_title>Custom Tab One</custom_tab_one_title>
+                <custom_tab_one_code>et_custom_tab1</custom_tab_one_code>
+                <enable_tab_two>1</enable_tab_two>
+                <custom_tab_two_type>cmsblock</custom_tab_two_type>
+                <custom_tab_two_title>Custom Tab Two</custom_tab_two_title>
+                <custom_tab_two_code>et_custom_tab2</custom_tab_two_code>
+            </custom_tabs>
+        </product_section>
+        <contact_section>
+            <contact_info>
+                <store_title><![CDATA[Etrend Store]]></store_title>
+                <store_phone><![CDATA[(123) 4567-890]]></store_phone>
+                <store_address><![CDATA[123 Street, City, London, 789AB]]></store_address>
+                <store_email><![CDATA[mail@example.com]]></store_email>
+                <addtional_info></addtional_info>
+            </contact_info>
+        </contact_section>
+    </default>
+</config>

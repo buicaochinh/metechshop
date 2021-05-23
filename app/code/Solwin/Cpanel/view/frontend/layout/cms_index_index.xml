@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin Freego Extension
+
+@category   Solwin
+@package    Solwin_Freego
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/
+
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Solwin_Cpanel::js/home-slider.js"/>
+    </head>
+</page>

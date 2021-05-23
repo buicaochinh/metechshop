@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+
+Solwin Infotech
+Solwin ScrolltoTop Extension
+
+@category   Solwin
+@package    Solwin_ScrolltoTop
+@copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+@license    https://www.solwininfotech.com/magento-extension-license/
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="Solwin_ScrolltoTop" setup_version="1.0.3"></module>
+</config>

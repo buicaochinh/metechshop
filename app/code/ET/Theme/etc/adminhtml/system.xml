@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/system_file.xsd">
+    <system>
+        <tab id="etrend" translate="label" sortOrder="999999">
+            <label>Etrend Theme</label>
+        </tab>
+        <section id="premium_info_section" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Premium Version Features</label>
+            <class>et-premium-tab</class>
+            <tab>etrend</tab>
+            <resource>ET_Theme::premiumfeaturesconfig</resource>
+            <group id="etpremium_information" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Information</label>
+                <attribute type="expanded">1</attribute>
+                <field id="premium_info" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>ET\Base\Block\Adminhtml\System\Config\Form\Premium</frontend_model>
+                </field>
+            </group>
+        </section>
+        <section id="theme_section" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Theme</label>
+            <tab>etrend</tab>
+            <resource>ET_Theme::themeconfig</resource>
+            <group id="etinformation" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Information</label>
+                <attribute type="expanded">1</attribute>
+                <field id="version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>ET\Theme\Block\Adminhtml\System\Config\Form\Info</frontend_model>
+                </field>
+                <field id="product_info" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>ET\Base\Block\Adminhtml\System\Config\Form\Info</frontend_model>
+                </field>
+            </group>
+            <group id="scrolltop" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Scroll To Top</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="addthis" translate="label" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Add This (Socials)</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pubid" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Addthis Pub ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[You will get pub id from http://www.addthis.com ]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="custom_settings" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customization</label>
+                <field id="custom_css" translate="label comment" type="textarea" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom CSS</label>
+                </field>
+                <field id="custom_js" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom JS</label>
+                </field>
+            </group>
+        </section>
+        <section id="header_section" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Header</label>
+            <tab>etrend</tab>
+            <resource>ET_Theme::headerconfig</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="header_top_static_block" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Static Block</label>
+                </field>
+                <field id="header_static_block" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Static Block</label>
+                </field>
+                <field id="language_heading" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Language Switcher</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="display_icons" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Language Icons Before Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[After enable this setting you need to upload images in pub/media/language folder. <br/> Image Size: 20px x 12px.<br/>Image Name: <store-view-code>.png]]></comment>
+                </field>
+            </group>
+            <group id="megamenu" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Navigation Menu</label>
+                <field id="show_home_link" translate="label" type="select" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show the link "Home"</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="footer_section" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Footer</label>
+            <tab>etrend</tab>
+            <resource>ET_Theme::footerconfig</resource>
+            <group id="footer_top" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer Top</label>
+                <field id="static_block" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Top Static Block</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="footer_middle" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer Middle</label>
+                <field id="footer_columns_heading" translate="label comment" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Columns</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="column_one_static_block" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 1 Static Block</label>
+                </field>
+                <field id="column_two_static_block" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 2 Static Block</label>
+                </field>
+                <field id="column_three_static_block" translate="label comment" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 3 Static Block</label>
+                </field>
+                <field id="column_four_static_block" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 4 Static Block</label>
+                </field>
+                <field id="footer_middle_static_heading" translate="label comment" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Static Block</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="footer_middle_static_block" translate="label comment" type="text" sortOrder="75" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block</label>
+                </field>
+            </group>
+            <group id="footer_bottom" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer Bottom</label>
+                <field id="left_static_block" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Left Static Block</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="right_static_block" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Right Static Block</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+        <section id="category_section" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product List</label>
+            <tab>etrend</tab>
+            <resource>ET_Theme::categoryconfig</resource>
+            <group id="product_labels" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Labels</label>
+                <field id="show_new_label" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show New Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_sale_label" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sale Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="product_section" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Detail</label>
+            <tab>etrend</tab>
+            <resource>ET_Theme::productconfig</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="show_new_label" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show New Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_sale_label" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sale Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="custom_tabs" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Tabs</label>
+                <field id="enable_tab_one" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Custom Tab 1</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_tab_one_type" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Tab 1 Type</label>
+                    <source_model>ET\Theme\Model\Config\Producttabtype</source_model>
+                    <depends>
+                        <field id="enable_tab_one">1</field>
+                    </depends>
+                </field>
+                <field id="custom_tab_one_title" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Tab 1 Title</label>
+                    <depends>
+                        <field id="enable_tab_one">1</field>
+                    </depends>
+                </field>
+                <field id="custom_tab_one_code" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Tab 1 Identifier</label>
+                    <comment>Please enter cms block identifier.</comment>
+                    <depends>
+                        <field id="enable_tab_one">1</field>
+                    </depends>
+                </field>
+                <field id="enable_tab_two" translate="label" type="select" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Custom Tab 2</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_tab_two_type" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Tab 2 Type</label>
+                    <source_model>ET\Theme\Model\Config\Producttabtype</source_model>
+                    <depends>
+                        <field id="enable_tab_two">1</field>
+                    </depends>
+                </field>
+                <field id="custom_tab_two_title" translate="label comment" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Tab 2 Title</label>
+                    <depends>
+                        <field id="enable_tab_two">1</field>
+                    </depends>
+                </field>
+                <field id="custom_tab_two_code" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Tab 2 Identifier</label>
+                    <comment>Please enter cms block identifier.</comment>
+                    <depends>
+                        <field id="enable_tab_two">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+        <section id="contact_section" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Contact</label>
+            <tab>etrend</tab>
+            <resource>ET_Theme::contactconfig</resource>
+            <group id="contact_info" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Contact Info</label>
+                <field id="store_title" translate="label comment" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="store_phone" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Phone</label>
+                </field>
+                <field id="store_address" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Address</label>
+                </field>
+                <field id="store_email" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email</label>
+                </field>
+                <field id="addtional_info" translate="label comment" type="textarea" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional Information</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

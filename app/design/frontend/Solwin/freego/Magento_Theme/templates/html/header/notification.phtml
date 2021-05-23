@@ -1,0 +1,18 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$top_header_notification = $helper->getTopheadernotification();
+?>
+<span class="header-notification">
+    <?php echo $top_header_notification; ?>
+</span>
