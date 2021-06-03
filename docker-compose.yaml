@@ -37,8 +37,6 @@ services:
     volumes:
       - ./dev/docker/initdb:/docker-entrypoint-initdb.d
       - ./dev/data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
     expose:
       - "3306"
     ports:
